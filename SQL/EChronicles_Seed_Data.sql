@@ -29,66 +29,66 @@ SET IDENTITY_INSERT Series OFF
 -- BOOKS --
 SET IDENTITY_INSERT Books ON
 -- Darkness Series by Stacey Marie Brown --
-INSERT INTO Books (id, title, author, order, read, platformId, seriesId) VALUES (1, 'Darkness of Light', 'Stacey Marie Brown', 1, 1, 1, 1);
-INSERT INTO Books (id, title, author, order, read, platformId, seriesId) VALUES (2, 'Fire in the Darkness', 'Stacey Marie Brown', 2, 1, 2, 1);
-INSERT INTO Books (id, title, author, order, read, platformId, seriesId) VALUES (3, 'Beast in the Darkness', 'Stacey Marie Brown', 2.5, 1, 1, 1);
-INSERT INTO Books (id, title, author, order, read, platformId, seriesId) VALUES (4, 'Dwellers of Darkness', 'Stacey Marie Brown', 3, 1, 1, 1);
-INSERT INTO Books (id, title, author, order, read, platformId, seriesId) VALUES (5, 'West', 'Stacey Marie Brown', 5, 0, 1, 1);
+INSERT INTO Books (id, title, author, [order], [read], platformId, seriesId) VALUES (1, 'Darkness of Light', 'Stacey Marie Brown', 1, 1, 1, 1);
+INSERT INTO Books (id, title, author, [order], [read], platformId, seriesId) VALUES (2, 'Fire in the Darkness', 'Stacey Marie Brown', 2, 1, 2, 1);
+INSERT INTO Books (id, title, author, [order], [read], platformId, seriesId) VALUES (3, 'Beast in the Darkness', 'Stacey Marie Brown', 2.5, 1, 1, 1);
+INSERT INTO Books (id, title, author, [order], [read], platformId, seriesId) VALUES (4, 'Dwellers of Darkness', 'Stacey Marie Brown', 3, 1, 1, 1);
+INSERT INTO Books (id, title, author, [order], [read], platformId, seriesId) VALUES (5, 'West', 'Stacey Marie Brown', 5, 0, 1, 1);
 
 -- Collector Series by Stacey Marie Brown --
-INSERT INTO Books (id, title, author, order, read, platformId, seriesId) VALUES (6, 'City in Embers', 'Stacey Marie Brown', 1, 0, 1, 2;
-INSERT INTO Books (id, title, author, order, read, platformId, seriesId) VALUES (7, 'The Barrier Between', 'Stacey Marie Brown', 2, 0, 1, 2;
-INSERT INTO Books (id, title, author, order, read, platformId, seriesId) VALUES (8, 'Across the Divide', 'Stacey Marie Brown', 3, 0, 1, 2;
-INSERT INTO Books (id, title, author, order, read, platformId, seriesId) VALUES (9, 'From Burning Ashes', 'Stacey Marie Brown', 4, 0, 1, 2;
+INSERT INTO Books (id, title, author, [order], [read], platformId, seriesId) VALUES (6, 'City in Embers', 'Stacey Marie Brown', 1, 0, 1, 2);
+INSERT INTO Books (id, title, author, [order], [read], platformId, seriesId) VALUES (7, 'The Barrier Between', 'Stacey Marie Brown', 2, 0, 1, 2);
+INSERT INTO Books (id, title, author, [order], [read], platformId, seriesId) VALUES (8, 'Across the Divide', 'Stacey Marie Brown', 3, 0, 1, 2);
+INSERT INTO Books (id, title, author, [order], [read], platformId, seriesId) VALUES (9, 'From Burning Ashes', 'Stacey Marie Brown', 4, 0, 1, 2);
 
 -- Devil in the Deep Blue Sea Series by Stacey Marie Brown --
-INSERT INTO Books (id, title, author, order, read, platformId, seriesId) VALUES (10, 'Silver Tongue Devil', 'Stacey Marie Brown', 1, 1, 1, 3;
-INSERT INTO Books (id, title, author, order, read, platformId, seriesId) VALUES (11, 'Devil in Boots', 'Stacey Marie Brown', 2, 1, 1, 3;
+INSERT INTO Books (id, title, author, [order], [read], platformId, seriesId) VALUES (10, 'Silver Tongue Devil', 'Stacey Marie Brown', 1, 1, 1, 3);
+INSERT INTO Books (id, title, author, [order], [read], platformId, seriesId) VALUES (11, 'Devil in Boots', 'Stacey Marie Brown', 2, 1, 1, 3);
 
 -- Lightness Saga Series by Stacey Marie Brown --
-INSERT INTO Books (id, title, author, order, read, platformId, seriesId) VALUES (12, 'The Crown of Light', 'Stacey Marie Brown', 1, 1, 1, 4;
-INSERT INTO Books (id, title, author, order, read, platformId, seriesId) VALUES (13, 'Lightness Falling', 'Stacey Marie Brown', 2, 1, 1, 4;
-INSERT INTO Books (id, title, author, order, read, platformId, seriesId) VALUES (14, 'Fall of the King', 'Stacey Marie Brown', 3, 1, 1, 4;
-INSERT INTO Books (id, title, author, order, read, platformId, seriesId) VALUES (15, 'Rise from the Embers', 'Stacey Marie Brown', 4, 1, 1, 4;
+INSERT INTO Books (id, title, author, [order], [read], platformId, seriesId) VALUES (12, 'The Crown of Light', 'Stacey Marie Brown', 1, 1, 1, 4);
+INSERT INTO Books (id, title, author, [order], [read], platformId, seriesId) VALUES (13, 'Lightness Falling', 'Stacey Marie Brown', 2, 1, 1, 4);
+INSERT INTO Books (id, title, author, [order], [read], platformId, seriesId) VALUES (14, 'Fall of the King', 'Stacey Marie Brown', 3, 1, 1, 4);
+INSERT INTO Books (id, title, author, [order], [read], platformId, seriesId) VALUES (15, 'Rise from the Embers', 'Stacey Marie Brown', 4, 1, 1, 4);
 
 -- Savage Lands Series by Stacey Marie Brown --
-INSERT INTO Books (id, title, author, order, read, platformId, seriesId) VALUES (12, 'Savage Lands', 'Stacey Marie Brown', 1, 1, 1, 5;
-INSERT INTO Books (id, title, author, order, read, platformId, seriesId) VALUES (13, 'Wild Lands', 'Stacey Marie Brown', 2, 1, 1, 5;
-INSERT INTO Books (id, title, author, order, read, platformId, seriesId) VALUES (14, 'Dead Lands', 'Stacey Marie Brown', 3, 1, 1, 5;
-INSERT INTO Books (id, title, author, order, read, platformId, seriesId) VALUES (15, 'Bad Lands', 'Stacey Marie Brown', 4, 1, 1, 5;
-INSERT INTO Books (id, title, author, order, read, platformId, seriesId) VALUES (16, 'Blood Lands', 'Stacey Marie Brown', 5, 1, 1, 5;
-INSERT INTO Books (id, title, author, order, read, platformId, seriesId) VALUES (17, 'Shadow Lands', 'Stacey Marie Brown', 6, 1, 1, 5;
-INSERT INTO Books (id, title, author, order, read, platformId, seriesId) VALUES (18, 'Land of Ashes', 'Stacey Marie Brown', 7, 1, 1, 5;
-INSERT INTO Books (id, title, author, order, read, platformId, seriesId) VALUES (19, 'Land of Monsters', 'Stacey Marie Brown', 8, 0, 1, 5;
+INSERT INTO Books (id, title, author, [order], [read], platformId, seriesId) VALUES (12, 'Savage Lands', 'Stacey Marie Brown', 1, 1, 1, 5);
+INSERT INTO Books (id, title, author, [order], [read], platformId, seriesId) VALUES (13, 'Wild Lands', 'Stacey Marie Brown', 2, 1, 1, 5);
+INSERT INTO Books (id, title, author, [order], [read], platformId, seriesId) VALUES (14, 'Dead Lands', 'Stacey Marie Brown', 3, 1, 1, 5);
+INSERT INTO Books (id, title, author, [order], [read], platformId, seriesId) VALUES (15, 'Bad Lands', 'Stacey Marie Brown', 4, 1, 1, 5);
+INSERT INTO Books (id, title, author, [order], [read], platformId, seriesId) VALUES (16, 'Blood Lands', 'Stacey Marie Brown', 5, 1, 1, 5);
+INSERT INTO Books (id, title, author, [order], [read], platformId, seriesId) VALUES (17, 'Shadow Lands', 'Stacey Marie Brown', 6, 1, 1, 5);
+INSERT INTO Books (id, title, author, [order], [read], platformId, seriesId) VALUES (18, 'Land of Ashes', 'Stacey Marie Brown', 7, 1, 1, 5);
+INSERT INTO Books (id, title, author, [order], [read], platformId, seriesId) VALUES (19, 'Land of Monsters', 'Stacey Marie Brown', 8, 0, 1, 5);
 
 -- Flesh and Fire Series by Jennifer Armentrout --
-INSERT INTO Books (id, title, author, order, read, platformId, seriesId) VALUES (20, 'A Shadow in the Ember', 'Jennifer Armentrout', 1, 1, 1, 6;
-INSERT INTO Books (id, title, author, order, read, platformId, seriesId) VALUES (21, 'A Light in the Flame', 'Jennifer Armentrout', 2, 1, 1, 6;
-INSERT INTO Books (id, title, author, order, read, platformId, seriesId) VALUES (22, 'A Fire in the Flesh', 'Jennifer Armentrout', 3, 1, 1, 6;
-INSERT INTO Books (id, title, author, order, read, platformId, seriesId) VALUES (23, 'Born of Blood and Ash', 'Jennifer Armentrout', 4, 1, 1, 6;
+INSERT INTO Books (id, title, author, [order], [read], platformId, seriesId) VALUES (20, 'A Shadow in the Ember', 'Jennifer Armentrout', 1, 1, 1, 6);
+INSERT INTO Books (id, title, author, [order], [read], platformId, seriesId) VALUES (21, 'A Light in the Flame', 'Jennifer Armentrout', 2, 1, 1, 6);
+INSERT INTO Books (id, title, author, [order], [read], platformId, seriesId) VALUES (22, 'A Fire in the Flesh', 'Jennifer Armentrout', 3, 1, 1, 6);
+INSERT INTO Books (id, title, author, [order], [read], platformId, seriesId) VALUES (23, 'Born of Blood and Ash', 'Jennifer Armentrout', 4, 1, 1, 6);
 
 -- Blood and Ash Series by Jennifer Armentrout --
-INSERT INTO Books (id, title, author, order, read, platformId, seriesId) VALUES (24, 'From Blood and Ash', 'Jennifer Armentrout', 1, 1, 1, 7;
-INSERT INTO Books (id, title, author, order, read, platformId, seriesId) VALUES (25, 'A Kingdom of Flesh and Fire', 'Jennifer Armentrout', 2, 1, 1, 7;
-INSERT INTO Books (id, title, author, order, read, platformId, seriesId) VALUES (26, 'The Crown of Gilded Bones', 'Jennifer Armentrout', 3, 1, 1, 7;
-INSERT INTO Books (id, title, author, order, read, platformId, seriesId) VALUES (27, 'The War of Two Queens', 'Jennifer Armentrout', 4, 1, 1, 7;
-INSERT INTO Books (id, title, author, order, read, platformId, seriesId) VALUES (28, 'A Soul of Ash and Blood', 'Jennifer Armentrout', 5, 1, 1, 7;
-INSERT INTO Books (id, title, author, order, read, platformId, seriesId) VALUES (28, 'The Primal of Blood and Bone', 'Jennifer Armentrout', 6, 0, 1, 7;
+INSERT INTO Books (id, title, author, [order], [read], platformId, seriesId) VALUES (24, 'From Blood and Ash', 'Jennifer Armentrout', 1, 1, 1, 7);
+INSERT INTO Books (id, title, author, [order], [read], platformId, seriesId) VALUES (25, 'A Kingdom of Flesh and Fire', 'Jennifer Armentrout', 2, 1, 1, 7);
+INSERT INTO Books (id, title, author, [order], [read], platformId, seriesId) VALUES (26, 'The Crown of Gilded Bones', 'Jennifer Armentrout', 3, 1, 1, 7);
+INSERT INTO Books (id, title, author, [order], [read], platformId, seriesId) VALUES (27, 'The War of Two Queens', 'Jennifer Armentrout', 4, 1, 1, 7);
+INSERT INTO Books (id, title, author, [order], [read], platformId, seriesId) VALUES (28, 'A Soul of Ash and Blood', 'Jennifer Armentrout', 5, 1, 1, 7);
+INSERT INTO Books (id, title, author, [order], [read], platformId, seriesId) VALUES (28, 'The Primal of Blood and Bone', 'Jennifer Armentrout', 6, 0, 1, 7);
 SET IDENTITY_INSERT Books OFF
 
 -- TV SHOWS --
 SET IDENTITY_INSERT Shows ON
-INSERT INTO Shows (id, title, order, watched, seasonId, platformId, seriesId) VALUES (1, 'Clone Wars', 4, 1, 1, 1, 8);
-INSERT INTO Shows (id, title, order, watched, seasonId, platformId, seriesId) VALUES (2, 'Star Wars Rebels', 7, 0, 1, 2, 8);
+INSERT INTO Shows (id, title, [order], watched, seasonId, platformId, seriesId) VALUES (1, 'Clone Wars', 4, 1, 1, 1, 8);
+INSERT INTO Shows (id, title, [order], watched, seasonId, platformId, seriesId) VALUES (2, 'Star Wars Rebels', 7, 0, 1, 2, 8);
 SET IDENTITY_INSERT Shows OFF
 
 -- MOVIES --
 SET IDENTITY_INSERT Movies ON
-INSERT INTO Movies (id, title, order, watched, platformId, seriesId) VALUES (1, 'Episode 1: Phantom Menace', 1, 1, 1, 8);
-INSERT INTO Movies (id, title, order, watched, platformId, seriesId) VALUES (2, 'Episode 2: Attack of the Clones', 2, 0, 2, 8);
-INSERT INTO Movies (id, title, order, watched, platformId, seriesId) VALUES (3, 'Clone Wars', 3, 0, 2, 8);
-INSERT INTO Movies (id, title, order, watched, platformId, seriesId) VALUES (4, 'Episode 3: Revenge of the Sith', 5, 0, 2, 8);
-INSERT INTO Movies (id, title, order, watched, platformId, seriesId) VALUES (2, 'Solo', 6, 0, 2, 8);
+INSERT INTO Movies (id, title, [order], watched, platformId, seriesId) VALUES (1, 'Episode 1: Phantom Menace', 1, 1, 1, 8);
+INSERT INTO Movies (id, title, [order], watched, platformId, seriesId) VALUES (2, 'Episode 2: Attack of the Clones', 2, 0, 2, 8);
+INSERT INTO Movies (id, title, [order], watched, platformId, seriesId) VALUES (3, 'Clone Wars', 3, 0, 2, 8);
+INSERT INTO Movies (id, title, [order], watched, platformId, seriesId) VALUES (4, 'Episode 3: Revenge of the Sith', 5, 0, 2, 8);
+INSERT INTO Movies (id, title, [order], watched, platformId, seriesId) VALUES (2, 'Solo', 6, 0, 2, 8);
 SET IDENTITY_INSERT Movies OFF
 
 -- SEASONS FOR TV SHOWS --

@@ -1,4 +1,6 @@
 
+using Entertainment_Chronicles.Repositories;
+
 namespace Entertainment_Chronicles
 {
     public class Program
@@ -10,6 +12,8 @@ namespace Entertainment_Chronicles
             // Add services to the container.
 
             builder.Services.AddControllers();
+            builder.Services.AddTransient<IUsersRepository, UsersRepository>();
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
@@ -21,6 +25,12 @@ namespace Entertainment_Chronicles
             {
                 app.UseSwagger();
                 app.UseSwaggerUI();
+                app.UseCors(options =>
+                {
+                    options.AllowAnyOrigin();
+                    options.AllowAnyMethod();
+                    options.AllowAnyHeader();
+                });
             }
 
             app.UseHttpsRedirection();

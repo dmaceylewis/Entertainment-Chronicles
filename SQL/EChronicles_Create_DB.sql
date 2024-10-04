@@ -19,18 +19,18 @@ DROP TABLE IF EXISTS [Platforms];
 -- CREATE TABLES --
 SET IDENTITY_INSERT Users ON
 CREATE TABLE [Users] (
-  [id] int PRIMARY KEY IDENTITY,
-  [name] nvarchar(255) NOT NULL,
-  [email] nvarchar(255) NOT NULL
+  [Id] int PRIMARY KEY IDENTITY,
+  [Name] nvarchar(255) NOT NULL,
+  [Email] nvarchar(255) NOT NULL
 )
 SET IDENTITY_INSERT Users OFF
 GO
 
 SET IDENTITY_INSERT Collections ON
 CREATE TABLE [Collections] (
-  [id] int PRIMARY KEY IDENTITY,
-  [userId] int NOT NULL,
-  [name] nvarchar(255) NOT NULL,
+  [Id] int PRIMARY KEY IDENTITY,
+  [UserId] int NOT NULL,
+  [Name] nvarchar(255) NOT NULL,
 
   -- CONSTRAINT [FK_Collections_Users] FOREIGN KEY ([userId]) REFERENCES [Users] ([id])
 )
@@ -39,9 +39,9 @@ GO
 
 SET IDENTITY_INSERT Series ON
 CREATE TABLE [Series] (
-  [id] int PRIMARY KEY IDENTITY,
-  [name] nvarchar(255) NOT NULL,
-  [collectionId] int NOT NULL,
+  [Id] int PRIMARY KEY IDENTITY,
+  [Name] nvarchar(255) NOT NULL,
+  [CollectionId] int NOT NULL,
 
   -- CONSTRAINT [FK_Series_Collections] FOREIGN KEY ([collectionId]) REFERENCES [Collections] ([id])
 )
@@ -50,83 +50,83 @@ GO
 
 SET IDENTITY_INSERT Books ON
 CREATE TABLE [Books] (
-  [id] int PRIMARY KEY IDENTITY,
-  [title] nvarchar(255) NOT NULL,
-  [author] nvarchar(255) NOT NULL,
-  [order] int NOT NULL,
-  [read] bit NOT NULL,
-  [platformId] int NOT NULL,
-  [seriesId] int NOT NULL
+  [Id] int PRIMARY KEY IDENTITY,
+  [Title] nvarchar(255) NOT NULL,
+  [Author] nvarchar(255) NOT NULL,
+  [Order] int NOT NULL,
+  [Read] bit NOT NULL,
+  [PlatformId] int NOT NULL,
+  [SeriesId] int NOT NULL
 )
 SET IDENTITY_INSERT Books OFF
 GO
 
 SET IDENTITY_INSERT Shows ON
 CREATE TABLE [Shows] (
-  [id] int PRIMARY KEY IDENTITY,
-  [title] nvarchar(255) NOT NULL,
-  [order] int NOT NULL,
-  [watched] bit NOT NULL,
-  [seasonId] int NOT NULL,
-  [platformId] int NOT NULL,
-  [seriesId] int NOT NULL
+  [Id] int PRIMARY KEY IDENTITY,
+  [Title] nvarchar(255) NOT NULL,
+  [Order] int NOT NULL,
+  [Watched] bit NOT NULL,
+  [SeasonId] int NOT NULL,
+  [PlatformId] int NOT NULL,
+  [SeriesId] int NOT NULL
 )
 SET IDENTITY_INSERT Shows OFF
 GO
 
 SET IDENTITY_INSERT Movies ON
 CREATE TABLE [Movies] (
-  [id] int PRIMARY KEY IDENTITY,
-  [title] nvarchar(255) NOT NULL,
-  [order] int NOT NULL,
-  [watched] bit NOT NULL,
-  [platformId] int NOT NULL,
-  [seriesId] int NOT NULL
+  [Id] int PRIMARY KEY IDENTITY,
+  [Title] nvarchar(255) NOT NULL,
+  [Order] int NOT NULL,
+  [Watched] bit NOT NULL,
+  [PlatformId] int NOT NULL,
+  [SeriesId] int NOT NULL
 )
 SET IDENTITY_INSERT Movies OFF
 GO
 
 SET IDENTITY_INSERT Season ON
 CREATE TABLE [Season] (
-  [id] int PRIMARY KEY IDENTITY,
-  [number] int NOT NULL,
-  [episode] int NOT NULL
+  [Id] int PRIMARY KEY IDENTITY,
+  [Number] int NOT NULL,
+  [Episode] int NOT NULL
 )
 SET IDENTITY_INSERT Season OFF
 GO
 
 SET IDENTITY_INSERT Platforms ON
 CREATE TABLE [Platforms] (
-  [id] int PRIMARY KEY IDENTITY,
-  [name] nvarchar(255) NOT NULL
+  [Id] int PRIMARY KEY IDENTITY,
+  [Name] nvarchar(255) NOT NULL
 )
 SET IDENTITY_INSERT Platforms OFF
 GO
 
 -- ADD FOREIGN KEYS TO TABLES --
-ALTER TABLE [Collections] ADD FOREIGN KEY ([userId]) REFERENCES [Users] ([id])
+ALTER TABLE [Collections] ADD FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id])
 GO
 
-ALTER TABLE [Series] ADD FOREIGN KEY ([collectionId]) REFERENCES [Collections] ([id])
+ALTER TABLE [Series] ADD FOREIGN KEY ([CollectionId]) REFERENCES [Collections] ([Id])
 GO
 
-ALTER TABLE [Shows] ADD FOREIGN KEY ([seriesId]) REFERENCES [Series] ([id])
+ALTER TABLE [Shows] ADD FOREIGN KEY ([SeriesId]) REFERENCES [Series] ([Id])
 GO
 
-ALTER TABLE [Books] ADD FOREIGN KEY ([seriesId]) REFERENCES [Series] ([id])
+ALTER TABLE [Books] ADD FOREIGN KEY ([SeriesId]) REFERENCES [Series] ([Id])
 GO
 
-ALTER TABLE [Shows] ADD FOREIGN KEY ([seasonId]) REFERENCES [Season] ([id])
+ALTER TABLE [Shows] ADD FOREIGN KEY ([SeasonId]) REFERENCES [Season] ([Id])
 GO
 
-ALTER TABLE [Movies] ADD FOREIGN KEY ([seriesId]) REFERENCES [Series] ([id])
+ALTER TABLE [Movies] ADD FOREIGN KEY ([SeriesId]) REFERENCES [Series] ([Id])
 GO
 
-ALTER TABLE [Books] ADD FOREIGN KEY ([platformId]) REFERENCES [Platforms] ([id])
+ALTER TABLE [Books] ADD FOREIGN KEY ([PlatformId]) REFERENCES [Platforms] ([Id])
 GO
 
-ALTER TABLE [Movies] ADD FOREIGN KEY ([platformId]) REFERENCES [Platforms] ([id])
+ALTER TABLE [Movies] ADD FOREIGN KEY ([PlatformId]) REFERENCES [Platforms] ([Id])
 GO
 
-ALTER TABLE [Shows] ADD FOREIGN KEY ([platformId]) REFERENCES [Platforms] ([id])
+ALTER TABLE [Shows] ADD FOREIGN KEY ([PlatformId]) REFERENCES [Platforms] ([Id])
 GO

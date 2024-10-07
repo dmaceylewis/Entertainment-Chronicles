@@ -114,7 +114,7 @@ namespace Entertainment_Chronicles.Repositories
                 using (var cmd = conn.CreateCommand())
                 {
                     cmd.CommandText = @"
-                            UPDATE Book
+                            UPDATE Books
                             SET Title = @Title
                                 Author = @Author
                                 Order = @Order

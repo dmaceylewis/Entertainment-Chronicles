@@ -3,16 +3,46 @@
   "WorkspaceRootPath": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|c:\\users\\user\\workspace\\capstone\\entertainment-chronicles\\repositories\\seasonrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|solutionrelative:repositories\\seasonrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|c:\\users\\user\\workspace\\capstone\\entertainment-chronicles\\repositories\\booksrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|solutionrelative:repositories\\booksrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|c:\\users\\user\\workspace\\capstone\\entertainment-chronicles\\repositories\\iseasonrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|solutionrelative:repositories\\iseasonrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\workspace\\Capstone\\SQL\\EChronicles_Create_DB.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\workspace\\Capstone\\SQL\\EChronicles_Seed_Data.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|c:\\users\\user\\workspace\\capstone\\entertainment-chronicles\\controllers\\platformscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|solutionrelative:controllers\\platformscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|c:\\users\\user\\workspace\\capstone\\entertainment-chronicles\\controllers\\seasoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|solutionrelative:controllers\\seasoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|c:\\users\\user\\workspace\\capstone\\entertainment-chronicles\\repositories\\iplatformsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|solutionrelative:repositories\\iplatformsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|c:\\users\\user\\workspace\\capstone\\entertainment-chronicles\\repositories\\platformsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|solutionrelative:repositories\\platformsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|c:\\users\\user\\workspace\\capstone\\entertainment-chronicles\\repositories\\collectionsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|solutionrelative:repositories\\collectionsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\workspace\\Capstone\\SQL\\EChronicles_Create_DB.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\workspace\\Capstone\\SQL\\EChronicles_Create_DB.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\workspace\\Capstone\\SQL\\EChronicles_Seed_Data.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\workspace\\Capstone\\SQL\\EChronicles_Seed_Data.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,11 +52,85 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BooksRepository.cs",
+              "DocumentMoniker": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\Repositories\\BooksRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\BooksRepository.cs",
+              "ToolTip": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\Repositories\\BooksRepository.cs",
+              "RelativeToolTip": "Repositories\\BooksRepository.cs",
+              "ViewState": "AQIAAKMAAAAAAAAAAADwv7YAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T15:32:34.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "EChronicles_Seed_Data.sql ",
+              "DocumentMoniker": "C:\\Users\\user\\workspace\\Capstone\\SQL\\EChronicles_Seed_Data.sql",
+              "RelativeDocumentMoniker": "..\\SQL\\EChronicles_Seed_Data.sql",
+              "ToolTip": "EChronicles_Seed_Data.sql ",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-10-07T15:54:36.693Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EChronicles_Create_DB.sql ",
+              "DocumentMoniker": "C:\\Users\\user\\workspace\\Capstone\\SQL\\EChronicles_Create_DB.sql",
+              "RelativeDocumentMoniker": "..\\SQL\\EChronicles_Create_DB.sql",
+              "ToolTip": "EChronicles_Create_DB.sql ",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-10-07T15:51:10.745Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PlatformsController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\Controllers\\PlatformsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PlatformsController.cs",
+              "ToolTip": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\Controllers\\PlatformsController.cs",
+              "RelativeToolTip": "Controllers\\PlatformsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T15:22:34.101Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SeasonController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\Controllers\\SeasonController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SeasonController.cs",
+              "ToolTip": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\Controllers\\SeasonController.cs",
+              "RelativeToolTip": "Controllers\\SeasonController.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAAAD4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T15:22:17.803Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IPlatformsRepository.cs",
+              "DocumentMoniker": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\Repositories\\IPlatformsRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\IPlatformsRepository.cs",
+              "ToolTip": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\Repositories\\IPlatformsRepository.cs",
+              "RelativeToolTip": "Repositories\\IPlatformsRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T15:10:42.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "CollectionsRepository.cs",
               "DocumentMoniker": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\Repositories\\CollectionsRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\CollectionsRepository.cs",
@@ -34,33 +138,20 @@
               "RelativeToolTip": "Repositories\\CollectionsRepository.cs",
               "ViewState": "AQIAAHwAAAAAAAAAAAAQwIIAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T14:34:59.587Z",
+              "WhenOpened": "2024-10-07T15:09:24.536Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ISeasonRepository.cs",
-              "DocumentMoniker": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\Repositories\\ISeasonRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\ISeasonRepository.cs",
-              "ToolTip": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\Repositories\\ISeasonRepository.cs",
-              "RelativeToolTip": "Repositories\\ISeasonRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAoAAAA",
+              "DocumentIndex": 6,
+              "Title": "PlatformsRepository.cs",
+              "DocumentMoniker": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\Repositories\\PlatformsRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\PlatformsRepository.cs",
+              "ToolTip": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\Repositories\\PlatformsRepository.cs",
+              "RelativeToolTip": "Repositories\\PlatformsRepository.cs",
+              "ViewState": "AQIAAG0AAAAAAAAAAAAiwHEAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T14:27:36.749Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SeasonRepository.cs",
-              "DocumentMoniker": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\Repositories\\SeasonRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\SeasonRepository.cs",
-              "ToolTip": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\Repositories\\SeasonRepository.cs",
-              "RelativeToolTip": "Repositories\\SeasonRepository.cs",
-              "ViewState": "AQIAAFsAAAAAAAAAAAAcwIkAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T14:26:05.762Z",
+              "WhenOpened": "2024-10-07T15:09:19.985Z",
               "EditorCaption": ""
             }
           ]

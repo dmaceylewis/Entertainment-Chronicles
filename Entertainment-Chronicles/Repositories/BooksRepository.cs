@@ -25,7 +25,7 @@ namespace Entertainment_Chronicles.Repositories
                               pf.[Name] AS PlatformName
                          FROM Books b
                               LEFT JOIN Series s ON b.SeriesId = s.id
-                              LEFT JOIN Platform pf ON b.PlatformId = pf.id
+                              LEFT JOIN Platforms pf ON b.PlatformId = pf.id
                         ORDER BY b.[Order] ASC";
 
                     var reader = cmd.ExecuteReader();
@@ -175,9 +175,10 @@ namespace Entertainment_Chronicles.Repositories
                 PlatformId = reader.GetInt32(reader.GetOrdinal("PlatformId")),
                 Platforms = new Platforms()
                 {
-                    Id = reader.GetInt32(reader.GetOrdinal("UserProfileId")),
+                    Id = reader.GetInt32(reader.GetOrdinal("PlatformId")),
                     Name = reader.GetString(reader.GetOrdinal("PlatformName"))
                 }
+               
             };
         }
     }

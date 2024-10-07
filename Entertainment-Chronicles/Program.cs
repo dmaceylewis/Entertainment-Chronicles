@@ -19,6 +19,7 @@ namespace Entertainment_Chronicles
             builder.Services.AddTransient<IShowsRepository, ShowsRepository>();
             builder.Services.AddTransient<IMoviesRepository, MoviesRepository>();
             builder.Services.AddTransient<ISeasonRepository, SeasonRepository>();
+            builder.Services.AddTransient<IPlatformsRepository, PlatformsRepository>();
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();

@@ -59,8 +59,8 @@ namespace Entertainment_Chronicles.Repositories
                               pf.[Name] AS PlatformName
                          FROM Books b
                               LEFT JOIN Series s ON b.SeriesId = s.id
-                              LEFT JOIN Platform pf ON b.PlatformId = pf.id
-                        WHERE up.Id = @Id
+                              LEFT JOIN Platforms pf ON b.PlatformId = pf.id
+                        WHERE b.Id = @Id
                         ORDER BY b.[Order] ASC";
 
                     DbUtils.AddParameter(cmd, "@Id", id);
@@ -87,7 +87,7 @@ namespace Entertainment_Chronicles.Repositories
                 using (var cmd = conn.CreateCommand())
                 {
                     cmd.CommandText = @"
-                    INSERT INTO Books (Title, Author, Order, Read, SeriesId, PlatformId)
+                    INSERT INTO Books (Title, Author, [Order], [Read], SeriesId, PlatformId)
                     OUTPUT INSERTED.ID
                     VALUES (@Title, @Author, @Order, @Read, @SeriesId, @PlatformId);";
 

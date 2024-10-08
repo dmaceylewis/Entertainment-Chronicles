@@ -30,7 +30,7 @@ namespace Entertainment_Chronicles.Repositories
                          FROM Books b
                               LEFT JOIN Series s ON tv.SeriesId = s.id
                               LEFT JOIN Season sea ON tv.SeriesId = sea.id
-                              LEFT JOIN Platform pf ON tv.PlatformId = pf.id
+                              LEFT JOIN Platforms pf ON tv.PlatformId = pf.id
                         ORDER BY tv.[Order] ASC";
 
                     var reader = cmd.ExecuteReader();
@@ -68,7 +68,7 @@ namespace Entertainment_Chronicles.Repositories
                          FROM Books b
                               LEFT JOIN Series s ON tv.SeriesId = s.id
                               LEFT JOIN Season sea ON tv.SeriesId = sea.id
-                              LEFT JOIN Platform pf ON tv.PlatformId = pf.id
+                              LEFT JOIN Platforms pf ON tv.PlatformId = pf.id
                         ORDER BY tv.[Order] ASC";
 
                     DbUtils.AddParameter(cmd, "@Id", id);
@@ -188,7 +188,7 @@ namespace Entertainment_Chronicles.Repositories
                 PlatformId = reader.GetInt32(reader.GetOrdinal("PlatformId")),
                 Platforms = new Platforms()
                 {
-                    Id = reader.GetInt32(reader.GetOrdinal("UserProfileId")),
+                    Id = reader.GetInt32(reader.GetOrdinal("PlatformId")),
                     Name = reader.GetString(reader.GetOrdinal("PlatformName"))
                 }
             };

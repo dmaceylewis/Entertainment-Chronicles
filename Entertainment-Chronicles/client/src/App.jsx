@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router } from "react-router-dom";
-import ApplicationViews from "./components/ApplicationViews";
-import Authorize from './components/Authorize';
+import Header from './components/nav/Header';
+import ApplicationViews from "./components/auth/ApplicationViews";
+import Authorize from './components/auth/Authorize';
 import { useEffect } from 'react';
 
 function App() {

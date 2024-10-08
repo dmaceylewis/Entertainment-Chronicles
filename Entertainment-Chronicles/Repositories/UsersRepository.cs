@@ -84,7 +84,7 @@ namespace Entertainment_Chronicles.Repositories
                 {
                     cmd.CommandText = @"
                         SELECT Id, Name, Email FROM Users
-                         WHERE up.Id = @Id";
+                         WHERE Id = @Id";
 
                     DbUtils.AddParameter(cmd, "@Id", id);
 

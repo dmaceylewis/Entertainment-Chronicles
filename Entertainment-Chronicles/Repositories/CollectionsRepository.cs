@@ -57,7 +57,7 @@ namespace Entertainment_Chronicles.Repositories
                         SELECT c.Id, c.[Name] AS CollectionName, c.UserId, u.[Name] AS UserName 
                         FROM Collections c
                         LEFT JOIN Users u ON c.UserId = u.Id
-                        WHERE up.Id = @Id
+                        WHERE c.Id = @Id
                         ORDER BY c.[Name] ASC";
 
                     DbUtils.AddParameter(cmd, "@Id", id);

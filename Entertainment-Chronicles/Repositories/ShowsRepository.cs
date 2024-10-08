@@ -21,15 +21,15 @@ namespace Entertainment_Chronicles.Repositories
                     cmd.CommandText = @"
                        SELECT tv.Id, tv.Title,
                               tv.[Order], tv.Watched,
-                              b.SeriesId, tv.SeasonId,
+                              tv.SeriesId, tv.SeasonId,
                               tv.PlatformId,
                               s.[Name] AS SeriesName,
                               sea.[Number] AS SeasonNumber,
                               sea.Episode,
                               pf.[Name] AS PlatformName
-                         FROM Books b
+                         FROM Shows tv
                               LEFT JOIN Series s ON tv.SeriesId = s.id
-                              LEFT JOIN Season sea ON tv.SeriesId = sea.id
+                              LEFT JOIN Season sea ON tv.SeasonId = sea.id
                               LEFT JOIN Platforms pf ON tv.PlatformId = pf.id
                         ORDER BY tv.[Order] ASC";
 
@@ -59,15 +59,15 @@ namespace Entertainment_Chronicles.Repositories
                     cmd.CommandText = @"
                         SELECT tv.Id, tv.Title,
                               tv.[Order], tv.Watched,
-                              b.SeriesId, tv.SeasonId,
+                              tv.SeriesId, tv.SeasonId,
                               tv.PlatformId,
                               s.[Name] AS SeriesName,
                               sea.[Number] AS SeasonNumber,
                               sea.Episode,
                               pf.[Name] AS PlatformName
-                         FROM Books b
+                         FROM Shows tv
                               LEFT JOIN Series s ON tv.SeriesId = s.id
-                              LEFT JOIN Season sea ON tv.SeriesId = sea.id
+                              LEFT JOIN Season sea ON tv.SeasonId = sea.id
                               LEFT JOIN Platforms pf ON tv.PlatformId = pf.id
                         ORDER BY tv.[Order] ASC";
 

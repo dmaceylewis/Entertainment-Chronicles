@@ -17,9 +17,9 @@ namespace Entertainment_Chronicles.Repositories
                 using (var cmd = conn.CreateCommand())
                 {
                     cmd.CommandText = @"
-                        SELECT s.Id, s.[Name] AS SeriesName, c.CollectionId, c.[Name] AS CollectionName 
+                        SELECT s.Id, s.[Name] AS SeriesName, s.CollectionId, c.[Name] AS CollectionName 
                         FROM Series s
-                        LEFT JOIN Collections c ON c.CollectionId = c.Id
+                        LEFT JOIN Collections c ON s.CollectionId = c.Id
                         ORDER BY s.[Name] ASC";
 
                     var reader = cmd.ExecuteReader();
@@ -54,10 +54,10 @@ namespace Entertainment_Chronicles.Repositories
                 using (var cmd = conn.CreateCommand())
                 {
                     cmd.CommandText = @"
-                        SELECT s.Id, s.[Name] AS SeriesName, c.CollectionId, c.[Name] AS CollectionName 
+                        SELECT s.Id, s.[Name] AS SeriesName, s.CollectionId, c.[Name] AS CollectionName 
                         FROM Series s
-                        LEFT JOIN Collections c ON c.CollectionId = c.Id
-                        WHERE up.Id = @Id
+                        LEFT JOIN Collections c ON s.CollectionId = c.Id
+                        WHERE s.Id = @Id
                         ORDER BY s.[Name] ASC";
 
                     DbUtils.AddParameter(cmd, "@Id", id);

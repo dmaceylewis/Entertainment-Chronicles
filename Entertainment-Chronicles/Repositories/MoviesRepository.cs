@@ -24,8 +24,8 @@ namespace Entertainment_Chronicles.Repositories
                               s.[Name] AS SeriesName,
                               pf.[Name] AS PlatformName
                          FROM Movies m
-                              LEFT JOIN Series s ON b.SeriesId = s.id
-                              LEFT JOIN Platforms pf ON b.PlatformId = pf.id
+                              LEFT JOIN Series s ON m.SeriesId = s.id
+                              LEFT JOIN Platforms pf ON m.PlatformId = pf.id
                         ORDER BY m.[Order] ASC";
 
                     var reader = cmd.ExecuteReader();

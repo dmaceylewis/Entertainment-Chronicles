@@ -9,7 +9,7 @@ import {
 import { useNavigate, Link } from "react-router-dom";
 import { login } from "../../services/UsersService";
 
-export default function Login({setIsLoggedIn}) {
+export const Login = ({setIsLoggedIn}) => {
   const navigate = useNavigate();
 
   const [email, setEmail] = useState();
@@ -21,6 +21,13 @@ export default function Login({setIsLoggedIn}) {
       .then(r =>{
       if(r){
       setIsLoggedIn(true)
+      localStorage.setItem("User",
+        JSON.stringify({
+          id: r.id,
+          email: r.email,
+          name: r.name
+        })
+      )
       navigate('/')
       }
       else{
@@ -44,6 +51,7 @@ export default function Login({setIsLoggedIn}) {
                 <Input 
                   className="login-form-input"
                   id="email" type="text"
+                  autoComplete="email" 
                   onChange={e => setEmail(e.target.value)} 
                 />
               </FormGroup>

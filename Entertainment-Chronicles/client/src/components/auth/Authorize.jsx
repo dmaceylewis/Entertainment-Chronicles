@@ -1,17 +1,17 @@
-import React from "react"
-import { Route, Routes, Navigate } from "react-router-dom";
-import Login from './Login'; 
-// import Register from './Register'
+import { Navigate, useLocation } from "react-router-dom"
 
+// We can access child components the same way we access props. Child components are passed to our props as a key/value pair where
+// children is the key.
 
-export default function Authorize({setIsLoggedIn}) {
+export const Authorize = ({ children }) => {
+  let location = useLocation()
 
-    return(
-         <Routes>
-            <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
-            {/* <Route path="/register" element={<Register setIsLoggedIn={setIsLoggedIn}/>} /> */}
-            <Route path="*" element={<Navigate to="/login" />} />
-         </Routes>
-      );
-    
-   }
+  // Check if user is logged in. If they are, render the CHILD components (in this case, the ApplicationViews component)
+  if (localStorage.getItem("Users")) {
+    return children
+  }
+  // If the user is NOT logged in, redirect them to the login page using the Navigate component from react-router-dom
+  else {
+    return <Navigate to={`/login`} state={{ from: location }} replace />
+  }
+}

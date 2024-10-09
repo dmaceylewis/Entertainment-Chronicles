@@ -24,7 +24,7 @@ export default function Login({setIsLoggedIn}) {
       navigate('/')
       }
       else{
-        alert("Invalid email")
+       window.alert("Invalid login")
       }
     })
   };
@@ -33,25 +33,34 @@ export default function Login({setIsLoggedIn}) {
     <main className="container-login">
       <section>
         <Form className="form-login" onSubmit={loginSubmit}>
-          <h1>Welcome to the Entertainment Chronicles</h1>
-          <h2>Please sign in</h2>
+          <article className="echron-title">
+            <h1>Welcome to the Entertainment Chronicles</h1>
+            <h2>Please sign in</h2>
+          </article>
+          <hr></hr>
           <fieldset>
               <FormGroup className="form-group">
-                <Label htmlFor="email">Email</Label>
-                <Input id="login-form-input" type="text" onChange={e => setEmail(e.target.value)} />
+                <Label for="email">Email</Label>
+                <Input 
+                  className="login-form-input"
+                  id="email" type="text"
+                  onChange={e => setEmail(e.target.value)} 
+                />
               </FormGroup>
               {/* <FormGroup>
               <Label htmlFor="password">Password</Label>
               <Input id="password" type="password" onChange={e => setPassword(e.target.value)} />
               </FormGroup> */}
-              <FormGroup className="form-group">
-                <Button className="login-btn" type="submit">Login</Button>
-              </FormGroup>
-              <Link to="/register">
-                <Button className="register-btn">
-                  Register
+              <section className="button-group">
+                <Button className="login-btn" color="warning" outline type="submit">
+                  Login
                 </Button>
-              </Link>
+                <Link to="/register">
+                  <Button className="register-btn" color="success" outline>
+                    Register
+                  </Button>
+                </Link>
+              </section>
           </fieldset>
         </Form>
       </section>

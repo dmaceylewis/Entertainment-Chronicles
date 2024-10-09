@@ -13,7 +13,7 @@
 }
 
 /* EMAIL */
-#login-form-input{
+.login-form-input{
     height: 35px;
     padding: 5px;
     border-radius: 5px;

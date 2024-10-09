@@ -7,12 +7,11 @@ import {
 // import "./welcome.css"
 import { Link } from "react-router-dom"
 
-export const Welcome = ({ currentUser }) => {
+export const Welcome = () => {
     return (
         <>
             <div className="echron-header">
-
-                <article className="echrom-title">
+                <article className="echron-title">
                     <h1>Welcome to the Entertainment Chronicles</h1>
                     <h2>Organize different versions of entertainment into collections!</h2>
                 </article>

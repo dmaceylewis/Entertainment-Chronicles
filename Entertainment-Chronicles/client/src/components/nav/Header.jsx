@@ -19,7 +19,7 @@ export default function Header({isLoggedIn, setIsLoggedIn}) {
   return (
     <div>
       <Navbar color="dark" dark expand="md">
-        <NavbarBrand tag={RRNavLink} to="/">Entertainment Chronciles</NavbarBrand>
+        <NavbarBrand tag={RRNavLink} to="/">Entertainment Chronicles</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar style={{alignItems: "center", textAlign: "center", marginLeft: "2rem", width: "fit-content"}}>

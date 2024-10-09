@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@75..125,300..700&display=swap');
+
+.echron-header {
+    margin: 3em;
+}
+
+.echron-title h1, h2{
+    text-align: center;
+    font-family: "Fredoka";
+}
+
+.echron-title h1{
+    font-weight: 700;
+}
+
+.echron-title h2{
+    font-weight: 600;
+    color: chartreuse;
+}
+
+.echron-collections {
+    display: flex;
+    justify-content: center;
+}

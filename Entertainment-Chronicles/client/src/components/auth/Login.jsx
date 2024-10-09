@@ -8,6 +8,7 @@ import {
 } from 'reactstrap';
 import { useNavigate, Link } from "react-router-dom";
 import { login } from "../../services/UsersService";
+import "./login.css";
 
 export const Login = ({setIsLoggedIn}) => {
   const navigate = useNavigate();
@@ -47,11 +48,17 @@ export const Login = ({setIsLoggedIn}) => {
           <hr></hr>
           <fieldset>
               <FormGroup className="form-group">
-                <Label for="email">Email</Label>
+                <Label for="email" style={{fontFamily: "Fredoka"}}>Email</Label>
                 <Input 
                   className="login-form-input"
                   id="email" type="text"
                   autoComplete="email" 
+                  placeholder="Enter your email address here"
+                  style={{
+                    borderRadius: 5,
+                    fontFamily: "Fredoka",
+                    color: 'white'
+                  }}
                   onChange={e => setEmail(e.target.value)} 
                 />
               </FormGroup>
@@ -60,11 +67,11 @@ export const Login = ({setIsLoggedIn}) => {
               <Input id="password" type="password" onChange={e => setPassword(e.target.value)} />
               </FormGroup> */}
               <section className="button-group">
-                <Button className="login-btn" color="warning" outline type="submit">
+                <Button className="login-btn" color="warning" outline type="submit" style={{fontFamily: "Fredoka"}}>
                   Login
                 </Button>
                 <Link to="/register">
-                  <Button className="register-btn" color="success" outline>
+                  <Button className="register-btn" color="success" outline style={{fontFamily: "Fredoka"}}>
                     Register
                   </Button>
                 </Link>

@@ -1,10 +1,11 @@
 import {
     Card, 
+    CardBody, 
     CardTitle, 
     Col, 
     Row
 } from "reactstrap"
-// import "./welcome.css"
+import "./welcome.css"
 import { Link } from "react-router-dom"
 
 export const Welcome = () => {
@@ -20,40 +21,67 @@ export const Welcome = () => {
 
             <div className="echron-collections">
             <Row xs="3">
-                <Col sm="6"
-                style={{
-                    border: '1em',
-                    color: 'yellow'
-                  }}>
-                    <Card>
-                        <i className="fa-solid fa-book-open"></i>
-                        <CardTitle tag="h5">
-                            Book Collections
-                        </CardTitle>
+                <Col>
+                    <Card
+                        body
+                        color="warning"
+                        className="text-center"
+                        style={{
+                            width: '12rem',
+                            fontFamily: "Fredoka",
+                            color: 'white'
+                        }}
+                    >
+                        <br></br>
+                        <i className="fa-solid fa-book-open fa-xl" />
+                        <br></br>
+                        <CardBody>
+                            <CardTitle tag="h4">
+                                Book Collections
+                            </CardTitle>
+                        </CardBody>
                     </Card>
                 </Col>
-                <Col sm="6"
-                style={{
-                    border: '1em',
-                    color: 'cyan'
-                  }}>
-                    <Card>
-                        <i className="fa-solid fa-tv"></i>
-                        <CardTitle tag="h5">
-                            TV Collections
-                        </CardTitle>
+                <Col>
+                    <Card
+                        body
+                        color="info"
+                        className="text-center"
+                        style={{
+                            width: '12rem',
+                            fontFamily: "Fredoka",
+                            color: 'white'
+                        }}
+                    >
+                        <br></br>
+                        <i className="fa-solid fa-tv fa-xl" />
+                        <br></br>
+                        <CardBody>
+                            <CardTitle tag="h4">
+                                TV Collections
+                            </CardTitle>
+                        </CardBody>
                     </Card>
                 </Col>
-                <Col sm="6"
-                style={{
-                    border: '1em',
-                    color: 'magenta'
-                  }}>
-                    <Card>
-                        <i className="fa-solid fa-film"></i>
-                        <CardTitle tag="h5">
-                            Movie Collections
-                        </CardTitle>
+                <Col>
+                    <Card
+                        body
+                        color="danger"
+                        className="text-center"
+                        style={{
+                            width: '12rem',
+                            fontFamily: "Fredoka",
+                            color: 'white'
+                        }}
+                    >
+                        <br></br>
+                        <i className="fa-solid fa-film fa-2xl" />
+                        <br></br>
+                        <CardBody>
+                            <CardTitle tag="h4">
+                                Movie Collections
+                            </CardTitle>
+                        </CardBody>
                     </Card>
                 </Col>
             </Row>

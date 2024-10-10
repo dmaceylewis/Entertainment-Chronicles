@@ -11,6 +11,20 @@ export const logout = () => {
       localStorage.clear()
 };
 
+export const register = (userObject) => {
+  return  fetch(`${apiUrl}/api/Users`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(userObject),
+  })
+  .then((response) => response.json())
+    .then((savedUserProfile) => {
+      localStorage.setItem("userProfile", JSON.stringify(savedUserProfile))
+    });
+};
+
 // Fetch to get User by Id => /api/Users/{id}
 export const getUserById = (id) => {
     return fetch(`${apiUrl}/api/Users/${id}`)

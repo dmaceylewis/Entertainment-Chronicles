@@ -5,6 +5,7 @@ import { ApplicationViews } from "./components/auth/ApplicationViews";
 import { Authorize } from './components/auth/Authorize';
 import { useEffect } from 'react';
 import { Login } from './components/auth/Login';
+import { Register } from './components/auth/Register';
 
 export const App = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(true);
@@ -22,12 +23,12 @@ export const App = () => {
         <Header isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
           <Routes>
             <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
-              {/* <Route path="/register" element={<Register />} /> */}
+            <Route path="/register" element={<Register setIsLoggedIn={setIsLoggedIn} />} />
 
               <Route path="*" element={
                   isLoggedIn ? <ApplicationViews /> 
                   : 
-                  <Authorize setIsLoggedIn={setIsLoggedIn} />
+                  <Authorize />
               } />
           </Routes>
       </>

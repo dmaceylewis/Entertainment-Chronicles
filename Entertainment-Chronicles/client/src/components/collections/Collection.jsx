@@ -19,7 +19,7 @@ export const Collection = ({ collection }) => {
         </p>
           <Link to={`/collection/${collection.id}`}>
             <Button color="info" outline size="sm">
-                <i class="fa-solid fa-eye" />
+                <i className="fa-solid fa-eye" />
             </Button>
           </Link>
           <Link to={`/collection/edit/${collection.id}`}>

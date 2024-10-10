@@ -8,3 +8,14 @@
     font-family: "Fredoka";
     font-weight: 700;
 }
+
+.container-collections h3{
+    font-family: "Fredoka";
+    font-weight: 600;
+    color: yellow;
+}
+
+.container-collections hr{
+    size: 3em;
+    color: yellow;
+}

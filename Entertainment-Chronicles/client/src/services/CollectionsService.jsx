@@ -27,3 +27,14 @@ export const getCollectionById = (id) => {
         return null;
       });
     };
+
+// Fetch to add new Collection to database
+export const addCollection = (collection) => {
+    return fetch(`${apiUrl}/api/Collections`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(collection)
+    });
+};

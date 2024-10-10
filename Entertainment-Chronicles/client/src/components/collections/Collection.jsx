@@ -3,29 +3,35 @@ import { Button, Card, CardBody } from "reactstrap";
 import { Link } from "react-router-dom";
 
 export const Collection = ({ collection }) => {
-  const userTypeId = localStorage.getItem("userTypeId");
-
-  if (userTypeId !== "1") {
-    return null; // Render nothing if the userTypeId is not 1
-  }
   
   return (
-    <Card>
+    <Card
+        body
+        color="light"
+        style={{
+            fontFamily: "Fredoka",
+            color: 'grey'
+        }}
+    >
       <CardBody>
         <p>
           {collection.name}
+        </p>
+          <Link to={`/collection/${collection.id}`}>
+            <Button color="info" outline size="sm">
+                <i class="fa-solid fa-eye" />
+            </Button>
+          </Link>
           <Link to={`/collection/edit/${collection.id}`}>
-            {" "}
-            <Button color="primary" outline size="sm">
-              Edit
+            <Button color="success" outline size="sm">
+                <i className="fa-regular fa-pen-to-square" />
             </Button>
           </Link>
           <Link to={`/collection/delete/${collection.id}`}>
-            <Button color="success" outline size="sm">
-              Delete
+            <Button color="danger" outline size="sm">
+                <i className="fa-regular fa-trash-can" />
             </Button>
           </Link>
-        </p>
       </CardBody>
     </Card>
   );

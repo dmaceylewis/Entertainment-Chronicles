@@ -1,4 +1,4 @@
-const apiUrl = "https://localhost:5001/";
+const apiUrl = "https://localhost:5001";
 
 // Fetch to get list of Collections => /api/Collections/
 export const getAllCollections = () => {

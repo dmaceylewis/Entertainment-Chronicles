@@ -1,0 +1,10 @@
+.container-collections{
+    margin: 3em;
+    border: none;
+}
+
+.container-collections h1{
+    text-align: center;
+    font-family: "Fredoka";
+    font-weight: 700;
+}

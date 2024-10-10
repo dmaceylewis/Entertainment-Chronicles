@@ -3,10 +3,10 @@ import { Button, Col } from "reactstrap";
 import { Link } from "react-router-dom";
 import { getAllCollections } from "../../services/CollectionsService.jsx";
 import { Collection } from "./Collection.jsx";
+import "./collections.css";
 
 export const CollectionsList = () => {
   const [collections, setCollections] = useState([]);
-  const userTypeId = localStorage.getItem("userTypeId");
 
   
   const getCollections = () => {
@@ -17,13 +17,9 @@ export const CollectionsList = () => {
     getCollections();
   }, []);
   
-  if (userTypeId !== "1") {
-    return null; // Render nothing if the userTypeId is not 1
-  }
-  
   return (
-    <div>
-      <h2>Collections</h2>
+    <div className="container-collections">
+      <h1>Collections</h1>
       {/* <div>
         <Link to="/collections/add" key="collection name">
         <Col>

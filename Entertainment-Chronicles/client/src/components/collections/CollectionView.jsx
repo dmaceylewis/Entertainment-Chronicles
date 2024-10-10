@@ -4,21 +4,29 @@ import { Link, useParams } from "react-router-dom";
 import { getCollectionById } from "../../services/CollectionsService.jsx";
 import { getAllSeries } from "../../services/SeriesService.jsx";
 import "./collections.css";
+import { getAllBooks } from "../../services/BooksService.jsx";
 
 export const CollectionView = () => {
     const [collection, setCollection] = useState([]);
     const [series, setSeries] = useState([]);
+    const [books, setBooks] = useState([]);
     const { id } = useParams();
 
     useEffect(() => {
         getCollectionById(id).then((collectionObj) => {
           setCollection(collectionObj);
         });
-      }, [id]);
+    }, [id]);
 
     useEffect(() => {
         getAllSeries().then((seriesArr) => {
             setSeries(seriesArr);
+        })
+    }, []);
+
+    useEffect(() => {
+        getAllBooks().then((booksArr) => {
+            setBooks(booksArr);
         })
     }, []);
   
@@ -26,6 +34,11 @@ export const CollectionView = () => {
     <div className="container-collections">
         <h1>{collection.name}</h1>
         <br/>
+        {/* {series.map((ser) => (
+          <ul>
+           <h3>{ser.name}</h3>
+          </ul>
+        ))} */}
         {collection.id === series?.collectionId ?
             <h3>{series.name}</h3>
         :

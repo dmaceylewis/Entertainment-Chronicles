@@ -1,20 +1,20 @@
 const apiUrl = "https://localhost:5001";
 
-// Fetch to get list of Series => /api/Series/
-export const getAllSeries = () => {
-    return fetch(`${apiUrl}/api/Series`)
+// Fetch to get list of Books => /api/Books/
+export const getAllBooks = () => {
+    return fetch(`${apiUrl}/api/Books`)
     .then((res) => {
         if (res.ok) {
             return res.json();
         } else {
-            throw new Error('Failed to fetch series');
+            throw new Error('Failed to fetch books');
         }
     });
 };
 
-// Fetch to get Series by Id => /api/Series/{id}
-export const getSeriesById = (id) => {
-    return fetch(`${apiUrl}/api/Series/${id}`)
+// Fetch to get Books by Id => /api/Books/{id}
+export const getBookById = (id) => {
+    return fetch(`${apiUrl}/api/Books/${id}`)
       .then((res) => {
         if (res.ok) {
           return res.json();
@@ -23,7 +23,7 @@ export const getSeriesById = (id) => {
         }
       })
       .catch((error) => {
-        console.error("Error fetching Series by ID:", error);
+        console.error("Error fetching Book by ID:", error);
         return null;
       });
 };

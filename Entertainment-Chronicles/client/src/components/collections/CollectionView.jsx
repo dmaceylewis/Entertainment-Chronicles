@@ -52,6 +52,6 @@ export const CollectionView = () => {
             ) : (
                 <h3>No series found</h3>
             )}
-        </div>
+    </div>
   );
 };

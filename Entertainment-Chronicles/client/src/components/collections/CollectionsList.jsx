@@ -20,6 +20,7 @@ export const CollectionsList = () => {
   return (
     <div className="container-collections">
       <h1>Collections</h1>
+      <hr />
       {/* <div>
         <Link to="/collections/add" key="collection name">
         <Col>

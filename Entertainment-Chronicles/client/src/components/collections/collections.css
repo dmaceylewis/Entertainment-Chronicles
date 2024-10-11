@@ -3,6 +3,11 @@
     border: none;
 }
 
+.container-collections ul{
+    padding: 0;
+    border: none;
+}
+
 .container-collections h1{
     text-align: center;
     font-family: "Fredoka";
@@ -19,6 +24,36 @@
     size: 5em;
     color: yellow;
 }
+
+.collection-card {
+    display: flex;
+    width: 100%;
+    padding: 10px; /* Optional: Adjust padding */
+}
+
+.collection-card-body {
+    display: flex;
+    justify-content: space-between; /* Distributes space between info and buttons */
+    width: 100%; /* Ensures the body takes full width */
+    align-items: center; /* Vertically center-aligns items */
+}
+
+.collection-info {
+    flex-grow: 1; /* Allows this section to take available space */
+    text-align: left; /* Aligns text to the left */
+}
+
+.collection-info h3{
+    font-family: "Fredoka";
+    font-weight: 500;
+    color: grey;
+}
+
+.collection-buttons {
+    display: flex;
+    gap: 5px; /* Adds space between buttons */
+}
+
 
 .series-name {
     display: flex;

@@ -10,7 +10,7 @@ export const getAllCollections = () => {
             throw new Error('Failed to fetch collections');
         }
     });
-  };
+};
 
 // Fetch to get Collection by Id => /api/Collections/{id}
 export const getCollectionById = (id) => {
@@ -26,7 +26,7 @@ export const getCollectionById = (id) => {
         console.error("Error fetching collection by ID:", error);
         return null;
       });
-    };
+};
 
 // Fetch to add new Collection to database
 export const addCollection = (collection) => {

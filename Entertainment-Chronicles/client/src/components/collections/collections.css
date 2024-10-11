@@ -16,6 +16,22 @@
 }
 
 .container-collections hr{
-    size: 3em;
+    size: 5em;
     color: yellow;
+}
+
+.series-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Aligns items vertically in the center */
+    padding: 10px 0; /* Optional: Adds some padding for spacing */
+}
+
+.series-name h3 {
+    margin: 0; /* Remove default margin */
+}
+
+.series-name i {
+    cursor: pointer;
+    font-size: 1.5em;
 }

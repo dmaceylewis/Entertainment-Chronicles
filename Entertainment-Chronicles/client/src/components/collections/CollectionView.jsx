@@ -3,9 +3,9 @@ import { Button, Card, CardBody } from "reactstrap";
 import { Link, useParams } from "react-router-dom";
 import { getCollectionById } from "../../services/CollectionsService.jsx";
 import { getAllSeries } from "../../services/SeriesService.jsx";
-import "./collections.css";
 import { BookList } from "../books/BookList.jsx";
 import { getAllBooks } from "../../services/BooksService.jsx";
+import "./collections.css";
 
 
 export const CollectionView = () => {
@@ -40,7 +40,10 @@ export const CollectionView = () => {
                 series.filter(s => s.collectionId === collection.id)
                     .map(seriesItem => (
                         <div key={seriesItem.id}>
-                            <h3>{seriesItem.name}</h3>
+                            <div className="series-name">
+                                <h3>{seriesItem.name}</h3>
+                                <i className="fa-solid fa-plus" />
+                            </div>
                             <hr/>
                             <BookList series={seriesItem} books={books} />
                             <br/>

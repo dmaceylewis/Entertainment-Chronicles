@@ -1,0 +1,22 @@
+.book-card {
+    display: flex;
+    justify-content: space-between; /* Distributes space between book info and buttons */
+    padding: 10px;
+}
+
+.book-card-body {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Ensures the body takes full width */
+    align-items: center; /* Vertically center-aligns items */
+}
+
+.book-info {
+    flex-grow: 1; /* Allows this section to take available space */
+    text-align: left; /* Aligns text to the left */
+}
+
+.book-buttons {
+    display: flex;
+    gap: 5px; /* Adds space between buttons */
+}

@@ -21,13 +21,14 @@ export const CollectionsList = () => {
     <div className="container-collections">
       <h1>Collections</h1>
       <hr />
-      {/* <div>
+      <div>
         <Link to="/collections/add" key="collection name">
         <Col>
-          <Button color="info">Add New Category</Button>
+          <Button color="info">Add New Collection</Button>
           </Col>
         </Link>
-      </div> */}
+      </div>
+      <br />
       <div>
         {collections.map((collection) => (
           <ul>

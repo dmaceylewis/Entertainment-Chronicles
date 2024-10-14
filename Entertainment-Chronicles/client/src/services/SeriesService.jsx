@@ -27,3 +27,14 @@ export const getSeriesById = (id) => {
         return null;
       });
 };
+
+// Fetch to add new Series to database
+export const addSeries = (series) => {
+    return fetch(`${apiUrl}/api/Series`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(series)
+    });
+};

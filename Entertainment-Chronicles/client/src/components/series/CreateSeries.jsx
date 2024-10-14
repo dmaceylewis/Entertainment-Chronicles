@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { 
   Button, 
   Form, 
@@ -6,26 +6,35 @@ import {
   Label, 
   Input 
 } from 'reactstrap';
-import { useNavigate, Link } from "react-router-dom";
-import { addCollection } from "../../services/CollectionsService";
+import { useNavigate, Link, useParams } from "react-router-dom";
+import { getCollectionById } from "../../services/CollectionsService";
+import { addSeries } from "../../services/SeriesService";
 import "../auth/login.css";
 
-export const CreateCollection = () => {
+export const CreateSeries = () => {
   const [name, setName] = useState("");
-  const userId = localStorage.getItem("userId");
+  const [collection, setCollection] = useState([]);
+  const { id } = useParams();
+
+    useEffect(() => {
+        getCollectionById(id).then((collectionObj) => {
+          setCollection(collectionObj);
+        });
+    }, [id]);
 
   const navigate = useNavigate();
+  const collectionId = localStorage.getItem("collectionId");
   
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newCollection = {
+    const newSeries = {
       name,
-      userId
+      collectionId
     };
-    addCollection(newCollection).then((c) => {
-      navigate("/collections/series/add");
+    addSeries(newSeries).then((c) => {
+      navigate("/collection/:id");
     }).catch((error) => {
-        console.error("Error creating collection:", error);
+        console.error("Error creating series:", error);
       });
   };
   
@@ -35,16 +44,16 @@ export const CreateCollection = () => {
       <section>
         <Form className="form-collection" onSubmit={handleSubmit}>
           <article className="echron-title">
-            <h1>Create a Collection</h1>
+            <h1>Create a Series in {collection?.name}</h1>
           </article>
           <hr />
           <fieldset>
               <FormGroup className="form-group">
-                <Label for="collection" style={{fontFamily: "Fredoka"}}>Collection Name</Label>
+                <Label for="series" style={{fontFamily: "Fredoka"}}>Series Name</Label>
                 <Input 
                   className="login-form-input"
-                  id="collection" type="text"
-                  placeholder="Enter new collection name here"
+                  id="seriesName" type="text"
+                  placeholder="Enter new series name here"
                   style={{
                     borderRadius: 5,
                     fontFamily: "Fredoka"

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Entertainment-Chronicles")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e245208d0b1859a1ba528fcb0d23af60e9fd2439")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+df0cb5e7d18b3eeb474439bc31a8237f9dc38e96")]
 [assembly: System.Reflection.AssemblyProductAttribute("Entertainment-Chronicles")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Entertainment-Chronicles")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

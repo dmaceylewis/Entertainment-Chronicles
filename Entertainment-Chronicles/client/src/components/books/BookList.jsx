@@ -25,7 +25,7 @@ export const BookList = ({series, books}) => {
                         >
                             <CardBody className="book-card-body">
                                 <div className="book-info">
-                                    <p>{book?.order}. {book?.title} by {book?.author}</p>
+                                    <p><strong>{book?.order}.</strong> {book?.title} <em>by {book?.author}</em></p>
                                 </div>
                                 <div className="book-buttons">
                                     <Link to={`/collection/${book.id}`}>

@@ -27,3 +27,14 @@ export const getBookById = (id) => {
         return null;
       });
 };
+
+// Fetch to add new Book to database
+export const addBook = (book) => {
+    return fetch(`${apiUrl}/api/Books`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(book)
+    });
+};

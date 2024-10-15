@@ -6,6 +6,7 @@ import { Authorize } from './components/auth/Authorize';
 import { useEffect } from 'react';
 import { Login } from './components/auth/Login';
 import { Register } from './components/auth/Register';
+import "./App.css";
 
 export const App = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(true);

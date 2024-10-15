@@ -93,12 +93,11 @@ namespace Entertainment_Chronicles.Repositories
                 using (var cmd = conn.CreateCommand())
                 {
                     cmd.CommandText = @"
-                    INSERT INTO Collections (Name, UserId)
+                    INSERT INTO Collections (Name)
                     OUTPUT INSERTED.ID
-                    VALUES (@Name, @UserId);";
+                    VALUES (@Name);";
 
                     DbUtils.AddParameter(cmd, "@Name", collection.Name);
-                    DbUtils.AddParameter(cmd, "@UserId", collection.UserId);
 
                     int id = (int)cmd.ExecuteScalar();
 

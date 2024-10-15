@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|c:\\users\\user\\workspace\\capstone\\entertainment-chronicles\\repositories\\seriesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|solutionrelative:repositories\\seriesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|c:\\users\\user\\workspace\\capstone\\entertainment-chronicles\\repositories\\collectionsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|solutionrelative:repositories\\collectionsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -22,11 +26,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "SeriesRepository.cs",
+              "DocumentMoniker": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\Repositories\\SeriesRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\SeriesRepository.cs",
+              "ToolTip": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\Repositories\\SeriesRepository.cs",
+              "RelativeToolTip": "Repositories\\SeriesRepository.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAYwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T20:23:29.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "BooksRepository.cs",
               "DocumentMoniker": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\Repositories\\BooksRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\BooksRepository.cs",
@@ -39,20 +56,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "CollectionsRepository.cs",
               "DocumentMoniker": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\Repositories\\CollectionsRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\CollectionsRepository.cs",
               "ToolTip": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\Repositories\\CollectionsRepository.cs",
               "RelativeToolTip": "Repositories\\CollectionsRepository.cs",
-              "ViewState": "AQIAAFYAAAAAAAAAAAAAAGgAAAAnAAAA",
+              "ViewState": "AQIAAFYAAAAAAAAAAAAAAF8AAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-10T14:20:56.028Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "UsersRepository.cs",
               "DocumentMoniker": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\Repositories\\UsersRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\UsersRepository.cs",

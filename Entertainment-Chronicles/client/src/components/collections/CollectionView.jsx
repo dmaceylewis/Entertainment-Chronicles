@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Button, Card, CardBody } from "reactstrap";
 import { Link, useParams } from "react-router-dom";
 import { getCollectionById } from "../../services/CollectionsService.jsx";
 import { getAllSeries } from "../../services/SeriesService.jsx";
@@ -50,7 +49,7 @@ export const CollectionView = () => {
                         </div>
                     ))
             ) : (
-                <h3>No series found</h3>
+                <h3>No series in collection</h3>
             )}
     </div>
   );

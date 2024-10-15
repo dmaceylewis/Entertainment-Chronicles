@@ -2,6 +2,7 @@
 using Entertainment_Chronicles.Models;
 using Entertainment_Chronicles.Repositories;
 using Azure;
+using System;
 
 namespace Entertainment_Chronicles.Controllers
 {
@@ -36,12 +37,12 @@ namespace Entertainment_Chronicles.Controllers
         [HttpPost]
         public IActionResult Post(Collections collection)
         {
-            if (collection == null)
-            {
-                return BadRequest();
-            }
+            //if (collection == null)
+            //{
+            //    return BadRequest();
+            //}
             _collectionsRepository.AddCollection(collection);
-            return CreatedAtAction("Get", new { id = collection.Id }, collection);
+            return CreatedAtAction("GetCollectionById", new { id = collection.Id }, collection);
         }
 
         [HttpPut("{id}")]

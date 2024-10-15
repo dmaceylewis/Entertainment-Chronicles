@@ -100,9 +100,9 @@ namespace Entertainment_Chronicles.Repositories
                     DbUtils.AddParameter(cmd, "@Name", collection.Name);
                     DbUtils.AddParameter(cmd, "@UserId", collection.UserId);
 
-                    int id = (int)cmd.ExecuteScalar();
+                    collection.Id = (int)cmd.ExecuteScalar();
 
-                    collection.Id = id;
+                    //collection.Id = id;
                 }
             }
         }

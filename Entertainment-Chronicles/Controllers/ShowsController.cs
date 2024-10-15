@@ -41,7 +41,7 @@ namespace Entertainment_Chronicles.Controllers
                 return BadRequest();
             }
             _showsRepository.AddShow(show);
-            return CreatedAtAction("Get", new { id = show.Id }, show);
+            return CreatedAtAction("GetShowById", new { id = show.Id }, show);
         }
 
         [HttpPut("{id}")]

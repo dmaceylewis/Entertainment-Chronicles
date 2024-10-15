@@ -42,7 +42,7 @@ namespace Entertainment_Chronicles.Controllers
                 return BadRequest();
             }
             _booksRepository.AddBook(book);
-            return CreatedAtAction("Get", new { id = book.Id }, book);
+            return CreatedAtAction("GetBookById", new { id = book.Id }, book);
         }
 
         [HttpPut("{id}")]

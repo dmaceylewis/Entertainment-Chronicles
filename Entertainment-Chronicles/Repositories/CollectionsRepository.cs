@@ -136,10 +136,15 @@ namespace Entertainment_Chronicles.Repositories
 
                 using (var cmd = conn.CreateCommand())
                 {
+
+                    // First delete any related series
+                    cmd.CommandText = "DELETE FROM Series WHERE CollectionId = @SeriesCollectionId";
+                    DbUtils.AddParameter(cmd, "@SeriesCollectionId", collectionId);
+                    cmd.ExecuteNonQuery();
+
                     cmd.CommandText = @"
                             DELETE FROM Collections
-                            WHERE Id = @id
-                        ";
+                            WHERE Id = @id";
 
                     DbUtils.AddParameter(cmd, "@id", collectionId);
 

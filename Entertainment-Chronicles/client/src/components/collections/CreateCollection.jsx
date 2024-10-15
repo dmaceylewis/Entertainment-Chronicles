@@ -12,12 +12,14 @@ import "../auth/login.css";
 
 export const CreateCollection = () => {
   const [name, setName] = useState("");
+  const userId = JSON.parse(localStorage.getItem("User")).id;
   const navigate = useNavigate();
   
   const handleSubmit = (e) => {
     e.preventDefault();
     const newCollection = {
-      name
+      name,
+      userId
     };
     addCollection(newCollection).then((c) => {
       navigate("/collections/series/add");

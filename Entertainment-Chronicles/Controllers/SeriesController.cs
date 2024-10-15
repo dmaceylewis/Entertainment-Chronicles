@@ -23,7 +23,7 @@ namespace Entertainment_Chronicles.Controllers
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetCollectionById(int id)
+        public IActionResult GetSeriesById(int id)
         {
             var series = _seriesRepository.GetSeriesById(id);
             if (series == null)
@@ -41,7 +41,7 @@ namespace Entertainment_Chronicles.Controllers
                 return BadRequest();
             }
             _seriesRepository.AddSeries(series);
-            return CreatedAtAction("Get", new { id = series.Id }, series);
+            return CreatedAtAction("GetSeriesById", new { id = series.Id }, series);
         }
 
         [HttpPut("{id}")]

@@ -41,7 +41,7 @@ namespace Entertainment_Chronicles.Controllers
                 return BadRequest();
             }
             _moviesRepository.AddMovie(movie);
-            return CreatedAtAction("Get", new { id = movie.Id }, movie);
+            return CreatedAtAction("GetMovieById", new { id = movie.Id }, movie);
         }
 
         [HttpPut("{id}")]

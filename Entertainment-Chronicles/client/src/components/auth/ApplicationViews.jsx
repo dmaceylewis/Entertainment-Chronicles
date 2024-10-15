@@ -5,6 +5,7 @@ import { CollectionsList } from "../collections/CollectionsList";
 import { CollectionView } from "../collections/CollectionView";
 import { CreateCollection } from "../collections/CreateCollection";
 import { CreateSeries } from "../series/CreateSeries";
+import { DeleteCollection } from "../collections/DeleteCollection";
 
 
 export const ApplicationViews = () => {
@@ -16,6 +17,7 @@ export const ApplicationViews = () => {
           <Route path="/collection/:id" element={<CollectionView />} />
           <Route path="/collections/add" element={<CreateCollection />} />
           <Route path="/collections/series/add" element={<CreateSeries />} />
+          <Route path="/collection/delete/:id" element={<DeleteCollection />} />
         </Routes>
    );
    

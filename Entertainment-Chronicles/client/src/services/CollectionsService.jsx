@@ -38,3 +38,10 @@ export const addCollection = (collection) => {
         body: JSON.stringify(collection)
     });
 };
+
+// Fetch to handle Delete
+export const deleteCollection = (id) => {
+    return fetch(`${apiUrl}/${id}`, {
+      method: "DELETE",
+    });
+  };

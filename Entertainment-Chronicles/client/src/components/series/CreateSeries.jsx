@@ -15,11 +15,11 @@ import { addSeries } from "../../services/SeriesService";
 import "../auth/login.css";
 
 export const CreateSeries = () => {
-    const [collections, setCollections] = useState([]);
+    const [collection, setCollection] = useState([]);
     const [chosenCollection, setChosenCollection] = useState({});
 
     useEffect(() => {
-        getAllCollections().then((allCollections) => setCollections(allCollections));
+        getAllCollections().then((allCollections) => setCollection(allCollections));
     }, []);
 
     {/* Select Collection Dropdown Function */}
@@ -46,7 +46,7 @@ export const CreateSeries = () => {
       collectionId: parseInt(newSeries.collectionId)
     };
     addSeries(series).then(() => {
-      navigate("/collection/${collection.id}");
+      navigate(`/collection/${newSeries.collectionId}`);
     }).catch((error) => {
         console.error("Error creating series:", error);
       });
@@ -98,7 +98,7 @@ export const CreateSeries = () => {
                                         Select Collection...
                                     </option>
 
-                                {collections.map((collection) => {
+                                {collection.map((collection) => {
                                      return (
                                         <option key={collection.id} value= {collection.id}>
                                             {collection.name}

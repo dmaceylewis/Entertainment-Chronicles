@@ -51,7 +51,7 @@ export const CollectionView = () => {
                     href="`/collection/${collection.id}`"
                     tag="a"
                 >
-                    {collection.name}
+                    {collection?.name}
                 </BreadcrumbItem>
         </Breadcrumb>
             <h1>{collection?.name}</h1>

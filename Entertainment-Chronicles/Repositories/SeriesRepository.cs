@@ -95,7 +95,7 @@ namespace Entertainment_Chronicles.Repositories
                 using (var cmd = conn.CreateCommand())
                 {
                     cmd.CommandText = @"
-                    INSERT INTO Series (Name, Order, CollectionId)
+                    INSERT INTO Series (Name, [Order], CollectionId)
                     OUTPUT INSERTED.ID
                     VALUES (@Name, @Order, @CollectionId);";
 
@@ -103,9 +103,9 @@ namespace Entertainment_Chronicles.Repositories
                     DbUtils.AddParameter(cmd, "@Order", series.Order);
                     DbUtils.AddParameter(cmd, "@CollectionId", series.CollectionId);
 
-                    int id = (int)cmd.ExecuteScalar();
+                    series.Id = (int)cmd.ExecuteScalar();
 
-                    series.Id = id;
+                   // series.Id = id;
                 }
             }
         }

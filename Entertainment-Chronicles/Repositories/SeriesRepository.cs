@@ -17,10 +17,10 @@ namespace Entertainment_Chronicles.Repositories
                 using (var cmd = conn.CreateCommand())
                 {
                     cmd.CommandText = @"
-                        SELECT s.Id, s.[Name] AS SeriesName, s.CollectionId, c.[Name] AS CollectionName 
+                        SELECT s.Id, s.[Name] AS SeriesName, s.[Order], s.CollectionId, c.[Name] AS CollectionName 
                         FROM Series s
                         LEFT JOIN Collections c ON s.CollectionId = c.Id
-                        ORDER BY s.[Name] ASC";
+                        ORDER BY s.[Order] ASC";
 
                     var reader = cmd.ExecuteReader();
                     var series = new List<Series>();
@@ -31,6 +31,7 @@ namespace Entertainment_Chronicles.Repositories
                         {
                             Id = DbUtils.GetInt(reader, "Id"),
                             Name = DbUtils.GetString(reader, "SeriesName"),
+                            Order = reader.GetInt32(reader.GetOrdinal("Order")),
                             CollectionId = DbUtils.GetInt(reader, "CollectionId"),
                             Collections = new Collections()
                             {
@@ -54,11 +55,11 @@ namespace Entertainment_Chronicles.Repositories
                 using (var cmd = conn.CreateCommand())
                 {
                     cmd.CommandText = @"
-                        SELECT s.Id, s.[Name] AS SeriesName, s.CollectionId, c.[Name] AS CollectionName 
+                        SELECT s.Id, s.[Name] AS SeriesName, s.[Order], s.CollectionId, c.[Name] AS CollectionName 
                         FROM Series s
                         LEFT JOIN Collections c ON s.CollectionId = c.Id
                         WHERE s.Id = @Id
-                        ORDER BY s.[Name] ASC";
+                        ORDER BY s.[Order] ASC";
 
                     DbUtils.AddParameter(cmd, "@Id", id);
 
@@ -70,6 +71,7 @@ namespace Entertainment_Chronicles.Repositories
                         {
                             Id = DbUtils.GetInt(reader, "Id"),
                             Name = DbUtils.GetString(reader, "SeriesName"),
+                            Order = reader.GetInt32(reader.GetOrdinal("Order")),
                             CollectionId = DbUtils.GetInt(reader, "CollectionId"),
                             Collections = new Collections()
                             {
@@ -93,11 +95,12 @@ namespace Entertainment_Chronicles.Repositories
                 using (var cmd = conn.CreateCommand())
                 {
                     cmd.CommandText = @"
-                    INSERT INTO Series (Name, CollectionId)
+                    INSERT INTO Series (Name, Order, CollectionId)
                     OUTPUT INSERTED.ID
-                    VALUES (@Name, @CollectionId);";
+                    VALUES (@Name, @Order, @CollectionId);";
 
                     DbUtils.AddParameter(cmd, "@Name", series.Name);
+                    DbUtils.AddParameter(cmd, "@Order", series.Order);
                     DbUtils.AddParameter(cmd, "@CollectionId", series.CollectionId);
 
                     int id = (int)cmd.ExecuteScalar();

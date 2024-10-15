@@ -1,4 +1,4 @@
-﻿USE [EChronicles]
+﻿﻿USE [EChronicles]
 GO
 
 SET IDENTITY_INSERT Users ON
@@ -13,16 +13,16 @@ INSERT INTO Collections (Id, UserId, [Name]) VALUES (3, 1, 'Star Wars Collection
 SET IDENTITY_INSERT Collections OFF
 
 SET IDENTITY_INSERT Series ON
-INSERT INTO Series (Id, [Name], CollectionId) VALUES (1, 'Darkness Series', 1);
-INSERT INTO Series (Id, [Name], CollectionId) VALUES (2, 'Collector Series', 1);
-INSERT INTO Series (Id, [Name], CollectionId) VALUES (3, 'Devil in the Deep Blue Sea Series', 1);
-INSERT INTO Series (Id, [Name], CollectionId) VALUES (4, 'Lightness Saga Series', 1);
-INSERT INTO Series (Id, [Name], CollectionId) VALUES (5, 'Savage Lands Series', 1);
+INSERT INTO Series (Id, [Name], [Order], CollectionId) VALUES (1, 'Darkness Series', 1, 1);
+INSERT INTO Series (Id, [Name], [Order], CollectionId) VALUES (2, 'Collector Series', 3, 1);
+INSERT INTO Series (Id, [Name], [Order], CollectionId) VALUES (3, 'Devil in the Deep Blue Sea Series', 4, 1);
+INSERT INTO Series (Id, [Name], [Order], CollectionId) VALUES (4, 'Lightness Saga Series', 2, 1);
+INSERT INTO Series (Id, [Name], [Order], CollectionId) VALUES (5, 'Savage Lands Series', 5, 1);
 
-INSERT INTO Series (Id, [Name], CollectionId) VALUES (6, 'Flesh and Fire Series', 2);
-INSERT INTO Series (Id, [Name], CollectionId) VALUES (7, 'Blood and Ash Series', 2);
+INSERT INTO Series (Id, [Name], [Order], CollectionId) VALUES (6, 'Flesh and Fire Series', 1, 2);
+INSERT INTO Series (Id, [Name], [Order], CollectionId) VALUES (7, 'Blood and Ash Series', 1, 2);
 
-INSERT INTO Series (Id, [Name], CollectionId) VALUES (8, 'Clone Wars Series', 3);
+INSERT INTO Series (Id, [Name], [Order], CollectionId) VALUES (8, 'Clone Wars Series', 4, 3);
 SET IDENTITY_INSERT Series OFF
 
 -- PLATFORMS --

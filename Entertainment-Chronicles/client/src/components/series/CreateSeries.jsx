@@ -4,7 +4,10 @@ import {
   Form, 
   FormGroup, 
   Label, 
-  Input 
+  Input, 
+  Col,
+  Breadcrumb,
+  BreadcrumbItem
 } from 'reactstrap';
 import { useNavigate, Link, useParams } from "react-router-dom";
 import { getAllCollections } from "../../services/CollectionsService";
@@ -41,7 +44,7 @@ export const CreateSeries = () => {
       collectionId: parseInt(newSeries.collectionId)
     };
     addSeries(series).then(() => {
-      navigate("/collection/:id");
+      navigate("/collection/${collection.id}");
     }).catch((error) => {
         console.error("Error creating series:", error);
       });
@@ -50,15 +53,35 @@ export const CreateSeries = () => {
 
   return (
     <main className="container-collections">
+        <Breadcrumb style={{margin: 5}}>
+                <BreadcrumbItem
+                    href="/"
+                    tag="a"
+                >
+                    Home
+                </BreadcrumbItem>
+                <BreadcrumbItem
+                    href="/Collections"
+                    tag="a"
+                >
+                    Collections
+                </BreadcrumbItem>
+                <BreadcrumbItem
+                    href="/collections/series/add"
+                    tag="a"
+                >
+                    New Series
+                </BreadcrumbItem>
+        </Breadcrumb>
       <section>
         <Form className="form-collection" onSubmit={handleSubmit}>
           <article className="echron-title">
-            <h1>Create a Series</h1>
+            <h1>Add a Series</h1>
           </article>
           <hr />
           <fieldset>
                 <FormGroup row>
-                    <Col >
+                    <Col>
                             <Input
                                 id="collections"
                                 name="select"

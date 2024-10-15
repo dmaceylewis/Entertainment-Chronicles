@@ -6,6 +6,7 @@ import "./collections.css";
 export const Collection = ({ collection }) => {
   
   return (
+    <>
     <Card
         body
         color="light"
@@ -38,5 +39,6 @@ export const Collection = ({ collection }) => {
         </div>
       </CardBody>
     </Card>
+    </>
   );
 };

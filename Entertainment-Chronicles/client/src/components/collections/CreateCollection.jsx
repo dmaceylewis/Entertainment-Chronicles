@@ -4,7 +4,9 @@ import {
   Form, 
   FormGroup, 
   Label, 
-  Input 
+  Input, 
+  Breadcrumb,
+  BreadcrumbItem
 } from 'reactstrap';
 import { useNavigate, Link } from "react-router-dom";
 import { addCollection } from "../../services/CollectionsService";
@@ -31,6 +33,26 @@ export const CreateCollection = () => {
 
   return (
     <main className="container-collections">
+        <Breadcrumb style={{margin: 5}}>
+                <BreadcrumbItem
+                    href="/"
+                    tag="a"
+                >
+                    Home
+                </BreadcrumbItem>
+                <BreadcrumbItem
+                    href="/Collections"
+                    tag="a"
+                >
+                    Collections
+                </BreadcrumbItem>
+                <BreadcrumbItem
+                    href="/collection/add"
+                    tag="a"
+                >
+                    New Collection
+                </BreadcrumbItem>
+        </Breadcrumb>
       <section>
         <Form className="form-collection" onSubmit={handleSubmit}>
           <article className="echron-title">

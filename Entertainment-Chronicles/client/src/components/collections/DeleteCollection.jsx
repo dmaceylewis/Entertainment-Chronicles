@@ -27,11 +27,11 @@ export const DeleteCollection = () => {
         });
     };
     
-    if (userId !== "1") {
-        return null; // Render nothing if the userTypeId is not 1
-    }
+    // if (userId !== "1") {
+    //     return null; // Render nothing if the userTypeId is not 1
+    // }
     
-    if (!collection) return <p>Loading...</p>;
+    // if (!collection) return <p>Loading...</p>;
 
     return (
         <div className="container-collections">
@@ -44,12 +44,12 @@ export const DeleteCollection = () => {
                     color: 'grey'
                 }}
             >
-            <CardBody className="collection-card-body">
-                <div className="collection-info">
+            <CardBody>
+                <div className="collection-delete">
                     <h1>Delete Collection</h1>
                     <p>Are you sure you want to delete the Collection: <strong>{collection.name}</strong>?</p>
                 </div>
-                <div className="collection-buttons">
+                <div>
                     <Button color="danger" onClick={handleDelete}>
                         Confirm Delete
                     </Button>

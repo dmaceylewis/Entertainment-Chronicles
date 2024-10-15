@@ -41,7 +41,7 @@ export const addCollection = (collection) => {
 
 // Fetch to handle Delete
 export const deleteCollection = (id) => {
-    return fetch(`${apiUrl}/${id}`, {
+    return fetch(`${apiUrl}/api/Collections/${id}`, {
       method: "DELETE",
     });
   };

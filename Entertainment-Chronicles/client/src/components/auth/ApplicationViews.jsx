@@ -1,7 +1,9 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+import { Welcome } from "../Welcome";
 
-export default function ApplicationViews() {
+
+export const ApplicationViews = () => {
   
    return(
         <Routes>

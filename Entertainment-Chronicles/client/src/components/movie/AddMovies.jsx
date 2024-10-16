@@ -16,11 +16,11 @@ import { getAllSeries } from "../../services/SeriesService";
 import { addShow, getAllSeasons } from "../../services/ShowsService";
 import "../auth/login.css";
 
-export const AddShows = ({ collection }) => {
+export const AddMovies = ({ collection }) => {
     const [series, setSeries] = useState([]);
     const [chosenSeriesType, setChosenSeriesType] = useState({});
     const [season, setSeason] = useState([]);
-    const [addedShow, setAddedShow] = useState([]);
+    const [addedMovie, setAddedMovie] = useState([]);
     const platformId = useParams();
 
     useEffect(() => {
@@ -40,7 +40,7 @@ export const AddShows = ({ collection }) => {
     }, []);
 
 
-    const [newShow, setNewShow] = useState({
+    const [newMovie, setNewMovie] = useState({
         title: "",
         order: 0,
         watched: false
@@ -52,18 +52,17 @@ export const AddShows = ({ collection }) => {
       setHasWatched(!hasWatched);
     };
   
-  const handleAddShow = (e) => {
+  const handleAddMovie = (e) => {
     e.preventDefault();
-    const show = {
-      title: newShow.title,
-      order: parseInt(newShow.order),
-      watched: newShow.watched,
-      seriesId: parseInt(newShow.seriesId),
-      seasonId: parseInt(newShow.seasonId),
-      platformId: parseInt(newShow.platformId)
+    const movie = {
+      title: newMovie.title,
+      order: parseInt(newMovie.order),
+      watched: newMovie.watched,
+      seriesId: parseInt(newMovie.seriesId),
+      platformId: parseInt(newMovie.platformId)
     };
-    setAddedShow((currentArray) => [...currentArray, show])
-    addShow(show).then(setNewShow({
+    setAddedMovie((currentArray) => [...currentArray, movie])
+    AddMovies(movie).then(setNewMovie({
         title: "",
         order: 0,
         watched: false
@@ -78,7 +77,7 @@ export const AddShows = ({ collection }) => {
       <section>
         <Form className="form-collection">
           <article className="echron-title">
-            <h3>Add a Show</h3>
+            <h3>Add a Movie</h3>
           </article>
           <hr />
           <fieldset>
@@ -93,9 +92,9 @@ export const AddShows = ({ collection }) => {
                                     fontFamily: "Fredoka"
                                   }}
                                 onChange={(event) => {
-                                    const seriesCopy = { ...newShow };
+                                    const seriesCopy = { ...newMovie };
                                     seriesCopy.seriesId = event.target.value;
-                                    setNewShow(seriesCopy);
+                                    setNewMovie(seriesCopy);
                                 }}
                             >
                                     <option value= '0'>
@@ -113,7 +112,7 @@ export const AddShows = ({ collection }) => {
                     </Col>
                 </FormGroup>
               <FormGroup className="form-group">
-                <Label for="showTitle" style={{fontFamily: "Fredoka", textAlign: 'left'}}>Title of Show</Label>
+                <Label for="showTitle" style={{fontFamily: "Fredoka", textAlign: 'left'}}>Title of Movie</Label>
                 <Input 
                   className="login-form-input"
                   id="showTitle" type="text"
@@ -123,57 +122,26 @@ export const AddShows = ({ collection }) => {
                     fontFamily: "Fredoka"
                   }}
                   onChange={(event) => {
-                    const showCopy = { ...newShow };
-                    showCopy.title = event.target.value;
-                    setNewShow(showCopy);
+                    const movieCopy = { ...newMovie };
+                    movieCopy.title = event.target.value;
+                    setNewMovie(movieCopy);
                     }} 
                 />
               </FormGroup>
               <FormGroup className="form-group">
-                <Label for="season" style={{fontFamily: "Fredoka", textAlign: 'left'}}>Season Number</Label>
-                <Col>
-                    <Input
-                        id="season"
-                        name="select"
-                        type="select"
-                        style={{
-                            borderRadius: 5,
-                            fontFamily: "Fredoka"
-                          }}
-                        onChange={(event) => {
-                            const showCopy = { ...newShow };
-                            showCopy.seasonId = event.target.value;
-                            setNewShow(seasonCopy);
-                        }}
-                    >
-                        <option value= '0'>
-                            Select Season...
-                        </option>
-
-                        {season.map((season) => {
-                            return (
-                                <option key={season.id} value= {season.id}>
-                                    <p>{season.number} - {season.episode}</p>
-                                </option>
-                            )
-                        })}
-                    </Input>
-                </Col>
-              </FormGroup>
-              <FormGroup className="form-group">
-                <Label for="showOrder" style={{fontFamily: "Fredoka", textAlign: 'left'}}>Show Order in Series</Label>
+                <Label for="movieOrder" style={{fontFamily: "Fredoka", textAlign: 'left'}}>Movie Order in Series</Label>
                 <Input 
                   className="login-form-input"
-                  id="showOrder" type="number"
-                  placeholder="Enter show order here"
+                  id="movieOrder" type="number"
+                  placeholder="Enter movie order here"
                   style={{
                     borderRadius: 5,
                     fontFamily: "Fredoka"
                   }}
                   onChange={(event) => {
-                    const showCopy = { ...newShow };
-                    showCopy.order = event.target.value;
-                    setNewShow(showCopy);
+                    const movieCopy = { ...newMovie };
+                    movieCopy.order = event.target.value;
+                    setNewMovie(movieCopy);
                     }} 
                 />
               </FormGroup>
@@ -185,12 +153,12 @@ export const AddShows = ({ collection }) => {
                 />
                 {' '}
                 <Label check>
-                    Watched the show?
+                    Watched the movie?
                 </Label>
               </FormGroup>
               <br />
               
-              {/* Add Show Button */}
+              {/* Add Movie Button */}
               <Button 
                 className="save-btn" 
                 color="warning" outline 
@@ -199,9 +167,9 @@ export const AddShows = ({ collection }) => {
                     display: 'flex',
                     justifyContent: 'flex-start'
                 }} 
-                onClick={handleAddShow}
+                onClick={handleAddMovie}
               >
-                    Add Show
+                    Add Movie
               </Button>
           </fieldset>
         </Form>
@@ -215,27 +183,27 @@ export const AddShows = ({ collection }) => {
             }}
         >
         <CardHeader>
-            Added Shows
+            Added Movies
         </CardHeader>
-        {addedShow.map((show) => {
+        {addedMovie.map((movie) => {
             return (
-                <ListGroup flush key={show.id}>
+                <ListGroup flush key={movie.id}>
                     <ListGroupItem>
-                        Show: {show.title}
+                        Movie: {movie.title}
                     </ListGroupItem>
                 </ListGroup>
             )
         })}                   
         </Card>
 
-        {/* Submit New Shows Button */}
+        {/* Submit New Movies Button */}
         <br/>
         <h5 className="mb-2">
-            Click when you're finished adding shows to this series
+            Click when you're finished adding movies to this series
         </h5>
         <Link to={`/collections/${collection.id}`}>
             <Button color="primary" style={{fontFamily: "Fredoka"}}>
-                Save Shows to Series
+                Save Movies to Series
             </Button>
         </Link>
       </section>

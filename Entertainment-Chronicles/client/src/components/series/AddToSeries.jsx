@@ -12,6 +12,8 @@ import {
 import { useNavigate, Link, useParams } from "react-router-dom";
 import { getAllCollections } from "../../services/CollectionsService";
 import { AddBooks } from "../books/AddBooks";
+import { AddShows } from "../shows/AddShows";
+import { AddMovies } from "../movie/AddMovies";
 import "../auth/login.css";
 
 export const AddToSeries = () => {
@@ -85,13 +87,13 @@ export const AddToSeries = () => {
 
                 {chosenSeriesType === 2 && (
                     <div>
-                        
+                        <AddShows collection={collection} />
                     </div>
                 )}
 
                 {chosenSeriesType === 3 && (
                     <div>
-                        
+                        <AddMovies collection={collection} />
                     </div>
                 )}
           </fieldset>

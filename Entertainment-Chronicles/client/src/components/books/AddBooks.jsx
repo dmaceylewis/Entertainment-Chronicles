@@ -82,7 +82,7 @@ export const AddBooks = ({ collection }) => {
                 <FormGroup row>
                     <Col>
                             <Input
-                                id="collections"
+                                id="series"
                                 name="select"
                                 type="select"
                                 onChange={(event) => {
@@ -106,10 +106,10 @@ export const AddBooks = ({ collection }) => {
                     </Col>
                 </FormGroup>
               <FormGroup className="form-group">
-                <Label for="series" style={{fontFamily: "Fredoka"}}>Title of Book</Label>
+                <Label for="bookTitle" style={{fontFamily: "Fredoka", textAlign: 'left'}}>Title of Book</Label>
                 <Input 
                   className="login-form-input"
-                  id="title" type="text"
+                  id="bookTitle" type="text"
                   placeholder="Enter new book title here"
                   style={{
                     borderRadius: 5,
@@ -123,7 +123,7 @@ export const AddBooks = ({ collection }) => {
                 />
               </FormGroup>
               <FormGroup className="form-group">
-                <Label for="series" style={{fontFamily: "Fredoka"}}>Author of Book</Label>
+                <Label for="author" style={{fontFamily: "Fredoka", textAlign: 'left'}}>Author of Book</Label>
                 <Input 
                   className="login-form-input"
                   id="author" type="text"
@@ -140,7 +140,7 @@ export const AddBooks = ({ collection }) => {
                 />
               </FormGroup>
               <FormGroup className="form-group">
-                <Label for="seriesOrder" style={{fontFamily: "Fredoka"}}>Book Order in Series</Label>
+                <Label for="bookOrder" style={{fontFamily: "Fredoka", textAlign: 'left'}}>Book Order in Series</Label>
                 <Input 
                   className="login-form-input"
                   id="bookOrder" type="number"
@@ -156,7 +156,7 @@ export const AddBooks = ({ collection }) => {
                     }} 
                 />
               </FormGroup>
-              <FormGroup check>
+              <FormGroup check style={{fontFamily: "Fredoka", color: 'white', textAlign: 'left'}}>
                 <Input 
                     type="checkbox" 
                     checked={hasRead} 
@@ -167,12 +167,17 @@ export const AddBooks = ({ collection }) => {
                     Read the book?
                 </Label>
               </FormGroup>
+              <br />
               
               {/* Add Book Button */}
               <Button 
                 className="save-btn" 
                 color="warning" outline 
-                style={{fontFamily: "Fredoka"}} 
+                style={{
+                    fontFamily: "Fredoka",
+                    display: 'flex',
+                    justifyContent: 'flex-start'
+                }} 
                 onClick={handleAddBook}
               >
                     Add Book
@@ -181,7 +186,8 @@ export const AddBooks = ({ collection }) => {
         </Form>
         <br/>
         <hr/>
-        
+
+        {/* List of Items Added */}
         <Card
             style={{
                 width: '18rem'
@@ -203,7 +209,7 @@ export const AddBooks = ({ collection }) => {
 
         {/* Submit New Books Button */}
         <br/>
-        <h5 className="mb-2 text-muted">
+        <h5 className="mb-2" style={{fontFamily: "Fredoka", color: 'grey'}}>
             Click when you're finished adding books to this series
         </h5>
         <Link to={`/collections/${collection.id}`}>

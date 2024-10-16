@@ -75,8 +75,7 @@ export const AddShows = ({ collection }) => {
 
   return (
     <main className="container-collections">
-      <section>
-        <Form className="form-collection">
+      <section className="form-collection">
           <article className="echron-title">
             <h3>Add a Show</h3>
           </article>
@@ -204,7 +203,6 @@ export const AddShows = ({ collection }) => {
                     Add Show
               </Button>
           </fieldset>
-        </Form>
         <br/>
         <hr/>
 
@@ -230,10 +228,10 @@ export const AddShows = ({ collection }) => {
 
         {/* Submit New Shows Button */}
         <br/>
-        <h5 className="mb-2">
+        <h5 className="mb-2" style={{fontFamily: "Fredoka", color: 'white'}}>
             Click when you're finished adding shows to this series
         </h5>
-        <Link to={`/collections/${collection.id}`}>
+        <Link to={`/collection/${collection.id}`}>
             <Button color="primary" style={{fontFamily: "Fredoka"}}>
                 Save Shows to Series
             </Button>

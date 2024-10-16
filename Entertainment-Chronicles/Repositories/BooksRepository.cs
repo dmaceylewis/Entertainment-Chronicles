@@ -98,9 +98,7 @@ namespace Entertainment_Chronicles.Repositories
                     DbUtils.AddParameter(cmd, "@SeriesId", book.SeriesId);
                     DbUtils.AddParameter(cmd, "@PlatformId", book.PlatformId);
 
-                    int id = (int)cmd.ExecuteScalar();
-
-                    book.Id = id;
+                    book.Id = (int)cmd.ExecuteScalar();
                 }
             }
         }

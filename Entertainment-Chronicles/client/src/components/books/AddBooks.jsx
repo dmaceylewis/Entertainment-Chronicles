@@ -20,7 +20,6 @@ export const AddBooks = ({ collection }) => {
     const [series, setSeries] = useState([]);
     const [chosenSeriesType, setChosenSeriesType] = useState({});
     const [addedBook, setAddedBook] = useState([]);
-    const platformId = useParams();
 
     useEffect(() => {
         getAllSeries().then((allSeries) => setSeries(allSeries));
@@ -39,7 +38,9 @@ export const AddBooks = ({ collection }) => {
         title: "",
         author: "",
         order: 0,
-        read: false
+        read: false,
+        seriesId: 0,
+        platformId: 0
     });
 
     const [hasRead, setHasRead] = useState(false);
@@ -54,26 +55,31 @@ export const AddBooks = ({ collection }) => {
       title: newBook.title,
       author: newBook.author,
       order: parseInt(newBook.order),
-      read: newBook.read,
+      read: hasRead,
       seriesId: parseInt(newBook.seriesId),
       platformId: parseInt(newBook.platformId)
     };
     setAddedBook((currentArray) => [...currentArray, book])
-    addBook(book).then(setNewBook({
-        title: "",
-        author: "",
-        order: 0,
-        read: false
-    }).catch((error) => {
+    addBook(book)
+        .then(() => {
+            // Reset the newBook state upon successful addition
+            setNewBook({
+                title: "",
+                author: "",
+                order: 0,
+                read: false,
+                seriesId: 0,
+                platformId: 0
+            });
+        }).catch((error) => {
         console.error("Error adding book:", error);
-      }))
+      })
   };
   
 
   return (
     <main className="container-collections">
-      <section>
-        <Form className="form-collection">
+      <section className="form-collection">
           <article className="echron-title">
             <h3>Add a Book</h3>
           </article>
@@ -96,7 +102,7 @@ export const AddBooks = ({ collection }) => {
                                     </option>
 
                                 {series.map((series) => {
-                                     return (
+                                    return (
                                         <option key={series.id} value= {series.id}>
                                             {series.name}
                                         </option>
@@ -183,7 +189,6 @@ export const AddBooks = ({ collection }) => {
                     Add Book
               </Button>
           </fieldset>
-        </Form>
         <br/>
         <hr/>
 
@@ -209,10 +214,10 @@ export const AddBooks = ({ collection }) => {
 
         {/* Submit New Books Button */}
         <br/>
-        <h5 className="mb-2" style={{fontFamily: "Fredoka", color: 'grey'}}>
+        <h5 className="mb-2" style={{fontFamily: "Fredoka", color: 'white'}}>
             Click when you're finished adding books to this series
         </h5>
-        <Link to={`/collections/${collection.id}`}>
+        <Link to={`/collection/${collection?.id}`}>
             <Button color="primary" style={{fontFamily: "Fredoka"}}>
                 Save Books to Series
             </Button>

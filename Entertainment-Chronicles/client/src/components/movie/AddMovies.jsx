@@ -74,8 +74,7 @@ export const AddMovies = ({ collection }) => {
 
   return (
     <main className="container-collections">
-      <section>
-        <Form className="form-collection">
+      <section className="form-collection">
           <article className="echron-title">
             <h3>Add a Movie</h3>
           </article>
@@ -172,7 +171,6 @@ export const AddMovies = ({ collection }) => {
                     Add Movie
               </Button>
           </fieldset>
-        </Form>
         <br/>
         <hr/>
 
@@ -198,7 +196,7 @@ export const AddMovies = ({ collection }) => {
 
         {/* Submit New Movies Button */}
         <br/>
-        <h5 className="mb-2">
+        <h5 className="mb-2" style={{fontFamily: "Fredoka", color: 'white'}}>
             Click when you're finished adding movies to this series
         </h5>
         <Link to={`/collections/${collection.id}`}>

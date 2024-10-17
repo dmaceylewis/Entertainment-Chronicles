@@ -11,7 +11,7 @@ import {
   ListGroupItem
 } from 'reactstrap';
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { getAllSeries } from "../../services/SeriesService";
+import { getAllSeries, getSeriesById } from "../../services/SeriesService";
 import { addBook } from "../../services/BooksService";
 import "../auth/login.css";
 
@@ -19,6 +19,8 @@ export const AddBooks = ({ collection }) => {
     const [series, setSeries] = useState([]);
     const [chosenSeriesType, setChosenSeriesType] = useState({});
     const [addedBook, setAddedBook] = useState([]);
+    // const platformId = JSON.parse(localStorage.getItem("Platforms")).id;
+    console.log(collection)
 
     useEffect(() => {
         getAllSeries().then((allSeries) => setSeries(allSeries));
@@ -32,6 +34,12 @@ export const AddBooks = ({ collection }) => {
     }
     document.addEventListener("change", handleSeriesTypeChoice)
 
+    const [chosenSeries, setChosenSeries] = useState({})
+
+    const handleChosenSeries = getSeriesById(chosenSeriesType).then((chosenSeries) => setChosenSeries(chosenSeries))
+    useEffect(() => {
+        handleChosenSeries
+    }, []);
 
     const [newBook, setNewBook] = useState({
         title: "",
@@ -39,9 +47,10 @@ export const AddBooks = ({ collection }) => {
         order: 0,
         read: false,
         seriesId: 0,
-        platformId: 0
+        platformId: 1
     });
 
+    {/* Read Book Checkbox Function */}
     const [hasRead, setHasRead] = useState(false);
 
     const handleCheckboxChange = () => {
@@ -216,7 +225,7 @@ export const AddBooks = ({ collection }) => {
         <h5 className="mb-2" style={{fontFamily: "Fredoka", color: 'white'}}>
             Click when you're finished adding books to this series
         </h5>
-        <Link to={`/collection/${collection?.id}`}>
+        <Link to={`/collection/${chosenSeries?.collectionId}`}>
             <Button color="primary" style={{fontFamily: "Fredoka"}}>
                 Save Books to Series
             </Button>

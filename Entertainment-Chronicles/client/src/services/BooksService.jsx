@@ -41,7 +41,7 @@ export const addBook = (book) => {
 
 // Fetch to handle the Edit
 export const editBook = (book) => {
-    return fetch(`${apiUrl}/${book.id}`, {
+    return fetch(`${apiUrl}/api/Books/${book.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

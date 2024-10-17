@@ -8,9 +8,10 @@ import {
 } from 'reactstrap';
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { editBook, getAllBooks } from "../../services/BooksService";
+import { getSeriesById } from "../../services/SeriesService";
 import "../auth/login.css";
 
-export const EditBook = ({ collection }) => {
+export const EditBook = () => {
     const { id } = useParams();
     const [book, setBook] = useState([]);
     const [hasRead, setHasRead] = useState(false);
@@ -29,12 +30,22 @@ export const EditBook = ({ collection }) => {
         });
     }, [id]);
 
+    const [series, setSeries] = useState({})
+
+    const handleSeries = () => {
+        getSeriesById(book?.seriesId).then((series) => setSeries(series))
+    }
+    useEffect(() => {
+        handleSeries()
+    }, []);
+
+
     const editBookObj = () => {
         
         let bookCopy = {...book}
     
         editBook(bookCopy).then(() => {
-                  navigate(`/collection/${collection.id}`);
+                  navigate(`/collection/${series?.collectionId}`);
                 });
     }
   
@@ -94,7 +105,7 @@ export const EditBook = ({ collection }) => {
                   }}
                   onChange={(event) => {
                     const bookCopy = { ...book };
-                    bookCopy.order = event.target.value;
+                    bookCopy.order = parseInt(event.target.value);
                     setBook(bookCopy);
                     }} 
                 />

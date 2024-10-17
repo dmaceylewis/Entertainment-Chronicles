@@ -7,20 +7,16 @@
       "RelativeMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|solutionrelative:repositories\\booksrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|c:\\users\\user\\workspace\\capstone\\entertainment-chronicles\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|solutionrelative:controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|c:\\users\\user\\workspace\\capstone\\entertainment-chronicles\\controllers\\seriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|solutionrelative:controllers\\seriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|c:\\users\\user\\workspace\\capstone\\entertainment-chronicles\\repositories\\seriesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|solutionrelative:repositories\\seriesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|c:\\users\\user\\workspace\\capstone\\entertainment-chronicles\\repositories\\collectionsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|solutionrelative:repositories\\collectionsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|c:\\users\\user\\workspace\\capstone\\entertainment-chronicles\\repositories\\seriesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|solutionrelative:repositories\\seriesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|c:\\users\\user\\workspace\\capstone\\entertainment-chronicles\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|solutionrelative:controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,13 +30,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "BooksController.cs",
               "DocumentMoniker": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\Controllers\\BooksController.cs",
               "RelativeDocumentMoniker": "Controllers\\BooksController.cs",
               "ToolTip": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\Controllers\\BooksController.cs",
               "RelativeToolTip": "Controllers\\BooksController.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAYwCYAAAAJAAAA",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAgwCYAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-16T18:06:59.508Z",
               "EditorCaption": ""
@@ -53,7 +49,7 @@
               "RelativeDocumentMoniker": "Repositories\\BooksRepository.cs",
               "ToolTip": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\Repositories\\BooksRepository.cs",
               "RelativeToolTip": "Repositories\\BooksRepository.cs",
-              "ViewState": "AQIAAFUAAAAAAAAAAAAjwGMAAAAAAAAA",
+              "ViewState": "AQIAAGsAAAAAAAAAAAAjwHAAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-15T21:33:23.378Z",
               "EditorCaption": ""
@@ -61,38 +57,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "SeriesController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\Controllers\\SeriesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\SeriesController.cs",
-              "ToolTip": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\Controllers\\SeriesController.cs",
-              "RelativeToolTip": "Controllers\\SeriesController.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAgwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T17:57:00.123Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "CollectionsRepository.cs",
               "DocumentMoniker": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\Repositories\\CollectionsRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\CollectionsRepository.cs",
               "ToolTip": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\Repositories\\CollectionsRepository.cs",
               "RelativeToolTip": "Repositories\\CollectionsRepository.cs",
-              "ViewState": "AQIAAFMAAAAAAAAAAAAMwI8AAAAAAAAA",
+              "ViewState": "AQIAAGoAAAAAAAAAAAAWwI8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-15T17:48:20.596Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "SeriesRepository.cs",
               "DocumentMoniker": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\Repositories\\SeriesRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\SeriesRepository.cs",
               "ToolTip": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\Repositories\\SeriesRepository.cs",
               "RelativeToolTip": "Repositories\\SeriesRepository.cs",
-              "ViewState": "AQIAAFkAAAAAAAAAAAAAAF4AAAA2AAAA",
+              "ViewState": "AQIAAHIAAAAAAAAAAAAQwF4AAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-14T20:23:29.496Z",
               "EditorCaption": ""

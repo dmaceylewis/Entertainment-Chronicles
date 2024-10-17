@@ -28,11 +28,11 @@ export const BookList = ({series, books}) => {
                                     <p><strong>{book?.order}.</strong> {book?.title} <em>by {book?.author}</em></p>
                                 </div>
                                 <div className="book-buttons">
-                                    <Link to={`/collection/${book.id}`}>
+                                    {/* <Link to={`/collection/${book.id}`}>
                                         <Button color="info" outline size="sm">
                                             <i className="fa-solid fa-eye" />
                                         </Button>
-                                    </Link>
+                                    </Link> */}
                                     <Link to={`/collection/edit/${book.id}`}>
                                         <Button color="success" outline size="sm">
                                             <i className="fa-regular fa-pen-to-square" />

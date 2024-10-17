@@ -7,12 +7,13 @@ import { CreateCollection } from "../collections/CreateCollection";
 import { CreateSeries } from "../series/CreateSeries";
 import { DeleteCollection } from "../collections/DeleteCollection";
 import { AddToSeries } from "../series/AddToSeries";
+import { EditBook } from "../books/EditBooks";
 
 
 export const ApplicationViews = () => {
   
    return(
-        <Routes>
+      <Routes>
           <Route path="/" element={<Welcome />} />
           <Route path="/collections" element={<CollectionsList />} />
           <Route path="/collection/:id" element={<CollectionView />} />
@@ -20,7 +21,8 @@ export const ApplicationViews = () => {
           <Route path="/collections/series/add" element={<CreateSeries />} />
           <Route path="/collections/series/add-items" element={<AddToSeries />} />
           <Route path="/collection/delete/:id" element={<DeleteCollection />} />
-        </Routes>
+          <Route path="/collection/edit/:id" element={<EditBook />} />
+      </Routes>
    );
    
 }

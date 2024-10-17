@@ -38,3 +38,14 @@ export const addBook = (book) => {
         body: JSON.stringify(book)
     });
 };
+
+// Fetch to handle the Edit
+export const editBook = (book) => {
+    return fetch(`${apiUrl}/${book.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(book),
+    });
+};

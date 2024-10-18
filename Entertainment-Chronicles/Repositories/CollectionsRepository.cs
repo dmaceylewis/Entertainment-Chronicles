@@ -137,11 +137,20 @@ namespace Entertainment_Chronicles.Repositories
                 using (var cmd = conn.CreateCommand())
                 {
 
-                    // First delete any related series
-                    cmd.CommandText = "DELETE FROM Series WHERE CollectionId = @SeriesCollectionId";
+                    // First delete any related books from the series
+                    cmd.CommandText = @"
+                            DELETE FROM Books 
+                            WHERE SeriesId IN (SELECT Id FROM Series WHERE CollectionId = @SeriesCollectionId)";
                     DbUtils.AddParameter(cmd, "@SeriesCollectionId", collectionId);
                     cmd.ExecuteNonQuery();
 
+                    // Next, delete any related series
+                    cmd.CommandText = @"
+                            DELETE FROM Series 
+                            WHERE CollectionId = @SeriesCollectionId";
+                    cmd.ExecuteNonQuery();
+
+                    // Finally, delete the collection itself
                     cmd.CommandText = @"
                             DELETE FROM Collections
                             WHERE Id = @id";

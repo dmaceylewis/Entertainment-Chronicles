@@ -19,7 +19,8 @@ export const Collection = ({ collection }) => {
       <CardBody className="collection-card-body">
         <div className="collection-info">
             <h3>{collection.name}</h3>
-        </div>
+        </div> 
+        <br/>
         <div className="collection-buttons">
             <Link to={`/collection/${collection.id}`}>
                 <Button color="info" outline size="sm">

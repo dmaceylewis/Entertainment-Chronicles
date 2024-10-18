@@ -50,3 +50,14 @@ export const addShow = (show) => {
         body: JSON.stringify(show)
     });
 };
+
+// Fetch to handle the Edit Show
+export const editShow = (show) => {
+    return fetch(`${apiUrl}/api/Books/${show.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(show),
+    });
+};

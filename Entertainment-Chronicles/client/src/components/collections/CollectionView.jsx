@@ -4,14 +4,16 @@ import { getCollectionById } from "../../services/CollectionsService.jsx";
 import { getAllSeries } from "../../services/SeriesService.jsx";
 import { BookList } from "../books/BookList.jsx";
 import { getAllBooks } from "../../services/BooksService.jsx";
-import "./collections.css";
 import { Breadcrumb, BreadcrumbItem, Button, Col } from "reactstrap";
+import { getAllShows } from "../../services/ShowsService.jsx";
+import "./collections.css";
 
 
 export const CollectionView = () => {
     const [collection, setCollection] = useState([]);
     const [series, setSeries] = useState([]);
     const [books, setBooks] = useState([]);
+    const [shows, setShows] = useState([]);
     const { id } = useParams();
 
     useEffect(() => {
@@ -29,6 +31,12 @@ export const CollectionView = () => {
     useEffect(() => {
         getAllBooks().then((booksArr) => {
             setBooks(booksArr);
+        })
+    }, []);
+
+    useEffect(() => {
+        getAllShows().then((showsArr) => {
+            setShows(showsArr);
         })
     }, []);
   
@@ -55,11 +63,13 @@ export const CollectionView = () => {
                 </BreadcrumbItem>
         </Breadcrumb>
             <h1>{collection?.name}</h1>
+            <hr />
             <div>
-                <Link to="/collections/series/add" key="series name">
-                    <Col>
-                        <Button color="info">Add New Series</Button>
-                    </Col>
+                <Link to={`/collection/delete/${collection.id}`}>
+                    <Button color="danger">Delete Collection</Button>
+                </Link>
+                <Link to="/collections/series/add">
+                    <Button color="info">Add New Series</Button>
                 </Link>
             </div>
             <br />
@@ -72,9 +82,13 @@ export const CollectionView = () => {
                                 <Link to="/collections/series/add-items">
                                     <i className="fa-solid fa-plus" />
                                 </Link>
+                                {/* <Link to={`/collections/series/edit/${series.id}`}>
+                                    <i className="fa-solid fa-pencil" />
+                                </Link> */}
                             </div>
                             <hr/>
                             <BookList series={seriesItem} books={books} />
+                            {/* <ShowList series={seriesItem} shows={shows} /> */}
                             <br/>
                         </div>
                     ))

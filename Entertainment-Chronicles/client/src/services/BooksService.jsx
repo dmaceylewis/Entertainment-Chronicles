@@ -49,3 +49,10 @@ export const editBook = (book) => {
       body: JSON.stringify(book),
     });
 };
+
+// Fetch to handle Delete
+export const deleteBook = (id) => {
+    return fetch(`${apiUrl}/api/Books/${id}`, {
+      method: "DELETE",
+    });
+};

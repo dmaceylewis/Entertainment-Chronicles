@@ -8,6 +8,7 @@ import { CreateSeries } from "../series/CreateSeries";
 import { DeleteCollection } from "../collections/DeleteCollection";
 import { AddToSeries } from "../series/AddToSeries";
 import { EditBook } from "../books/EditBooks";
+import { DeleteBook } from "../books/DeleteBook";
 
 
 export const ApplicationViews = () => {
@@ -20,8 +21,10 @@ export const ApplicationViews = () => {
           <Route path="/collections/add" element={<CreateCollection />} />
           <Route path="/collections/series/add" element={<CreateSeries />} />
           <Route path="/collections/series/add-items" element={<AddToSeries />} />
+          <Route path="/collection/series/edit/:id" element={<DeleteBook />} />
           <Route path="/collection/delete/:id" element={<DeleteCollection />} />
-          <Route path="/collection/edit/:id" element={<EditBook />} />
+          <Route path="/collection/editBook/:id" element={<EditBook />} />
+          <Route path="/collection/deleteBook/:id" element={<DeleteBook />} />
       </Routes>
    );
    

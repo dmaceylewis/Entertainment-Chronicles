@@ -19,9 +19,7 @@ export const AddBooks = ({ collection }) => {
     const [series, setSeries] = useState([]);
     const [chosenSeriesType, setChosenSeriesType] = useState({});
     const [addedBook, setAddedBook] = useState([]);
-    // const platformId = JSON.parse(localStorage.getItem("Platforms")).id;
-    console.log(collection)
-
+    
     useEffect(() => {
         getAllSeries().then((allSeries) => setSeries(allSeries));
     }, []);

@@ -15,6 +15,7 @@ export const EditBook = () => {
     const { id } = useParams();
     const [book, setBook] = useState([]);
     const [hasRead, setHasRead] = useState(false);
+    const [series, setSeries] = useState({})
     const navigate = useNavigate();
 
     const handleCheckboxChange = () => {
@@ -27,17 +28,17 @@ export const EditBook = () => {
             (book) => book.id === parseInt(id)
           );
             setBook(bookToEdit);
+            getSeriesById(bookToEdit.seriesId).then((series) => setSeries(series))
         });
     }, [id]);
 
-    const [series, setSeries] = useState({})
 
-    const handleSeries = () => {
-        getSeriesById(book?.seriesId).then((series) => setSeries(series))
-    }
-    useEffect(() => {
-        handleSeries()
-    }, []);
+    // const handleSeries = () => {
+        
+    // }
+    // useEffect(() => {
+    //     handleSeries()
+    // }, []);
 
 
     const editBookObj = () => {

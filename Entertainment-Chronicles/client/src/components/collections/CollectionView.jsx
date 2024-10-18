@@ -65,7 +65,7 @@ export const CollectionView = () => {
             <h1>{collection?.name}</h1>
             <hr />
             <div>
-                <Link to={`/collection/delete/${collection.id}`}>
+                <Link to={`/collection/delete/${collection?.id}`}>
                     <Button color="danger">Delete Collection</Button>
                 </Link>
                 <Link to="/collections/series/add">

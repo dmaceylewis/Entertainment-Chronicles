@@ -38,8 +38,7 @@
               "RelativeToolTip": "Controllers\\BooksController.cs",
               "ViewState": "AQIAAB0AAAAAAAAAAAAgwCYAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T18:06:59.508Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-16T18:06:59.508Z"
             },
             {
               "$type": "Document",
@@ -51,8 +50,7 @@
               "RelativeToolTip": "Repositories\\BooksRepository.cs",
               "ViewState": "AQIAAGsAAAAAAAAAAAAjwHcAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T21:33:23.378Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-15T21:33:23.378Z"
             },
             {
               "$type": "Document",
@@ -77,8 +75,7 @@
               "RelativeToolTip": "Repositories\\SeriesRepository.cs",
               "ViewState": "AQIAAHIAAAAAAAAAAAAQwF4AAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T20:23:29.496Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-14T20:23:29.496Z"
             }
           ]
         }

@@ -33,14 +33,6 @@ export const EditBook = () => {
     }, [id]);
 
 
-    // const handleSeries = () => {
-        
-    // }
-    // useEffect(() => {
-    //     handleSeries()
-    // }, []);
-
-
     const editBookObj = () => {
         
         let bookCopy = {...book}

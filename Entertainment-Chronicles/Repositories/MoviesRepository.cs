@@ -114,10 +114,10 @@ namespace Entertainment_Chronicles.Repositories
                 {
                     cmd.CommandText = @"
                             UPDATE Movies
-                            SET Title = @Title
-                                Order = @Order
-                                Watched = @Watched
-                                SeriesId = @SeriesId
+                            SET Title = @Title,
+                                [Order] = @Order,
+                                Watched = @Watched,
+                                SeriesId = @SeriesId,
                                 PlatformId = @PlatformId
                             WHERE Id = @Id";
 

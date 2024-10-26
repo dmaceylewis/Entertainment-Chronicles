@@ -39,6 +39,17 @@ export const addCollection = (collection) => {
     });
 };
 
+// Fetch to handle the Edit
+export const editCollection = (collection) => {
+  return fetch(`${apiUrl}/api/Collections/${collection.id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(collection),
+  });
+};
+
 // Fetch to handle Delete
 export const deleteCollection = (id) => {
     return fetch(`${apiUrl}/api/Collections/${id}`, {

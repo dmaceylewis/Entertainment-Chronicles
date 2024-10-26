@@ -34,10 +34,23 @@ export const AddBooks = ({ collection }) => {
 
     const [chosenSeries, setChosenSeries] = useState({})
 
-    const handleChosenSeries = getSeriesById(chosenSeriesType).then((chosenSeries) => setChosenSeries(chosenSeries))
-    useEffect(() => {
-        handleChosenSeries
-    }, []);
+    // const handleChosenSeries = getSeriesById(chosenSeriesType).then((chosenSeries) => setChosenSeries(chosenSeries))
+    // useEffect(() => {
+    //     handleChosenSeries
+    // }, []);
+
+    const handleSeriesChange = (event) => {
+      const selectedSeriesId = parseInt(event.target.value);
+      setNewBook((prev) => ({ ...prev, seriesId: selectedSeriesId }));
+      
+      if (selectedSeriesId) {
+          getSeriesById(selectedSeriesId).then((seriesData) => {
+              setChosenSeries(seriesData);
+          });
+      } else {
+          setChosenSeries({});
+      }
+    };
 
     const [newBook, setNewBook] = useState({
         title: "",
@@ -97,11 +110,7 @@ export const AddBooks = ({ collection }) => {
                                 id="series"
                                 name="select"
                                 type="select"
-                                onChange={(event) => {
-                                    const seriesCopy = { ...newBook };
-                                    seriesCopy.seriesId = event.target.value;
-                                    setNewBook(seriesCopy);
-                                }}
+                                onChange={handleSeriesChange}
                             >
                                     <option value= '0'>
                                         Select Series...

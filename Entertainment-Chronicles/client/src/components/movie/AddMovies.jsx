@@ -13,14 +13,13 @@ import {
 } from 'reactstrap';
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { getAllSeries, getSeriesById } from "../../services/SeriesService";
-import { addMovie } from "../../services/MoviesService";
+import { addMovie, getMoviesById } from "../../services/MoviesService";
 import "../auth/login.css";
 
 export const AddMovies = ({ collection }) => {
     const [series, setSeries] = useState([]);
     const [chosenSeriesType, setChosenSeriesType] = useState({});
     const [addedMovie, setAddedMovie] = useState([]);
-    const platformId = useParams();
 
     useEffect(() => {
         getAllSeries().then((allSeries) => setSeries(allSeries));
@@ -36,10 +35,18 @@ export const AddMovies = ({ collection }) => {
 
     const [chosenSeries, setChosenSeries] = useState({})
 
-    const handleChosenSeries = getSeriesById(chosenSeriesType).then((chosenSeries) => setChosenSeries(chosenSeries))
-    useEffect(() => {
-        handleChosenSeries
-    }, []);
+    const handleSeriesChange = (event) => {
+      const selectedSeriesId = parseInt(event.target.value);
+      setNewBook((prev) => ({ ...prev, seriesId: selectedSeriesId }));
+      
+      if (selectedSeriesId) {
+          getMoviesById(selectedSeriesId).then((seriesData) => {
+              setChosenSeries(seriesData);
+          });
+      } else {
+          setChosenSeries({});
+      }
+    };
 
 
     const [newMovie, setNewMovie] = useState({
@@ -92,11 +99,7 @@ export const AddMovies = ({ collection }) => {
                                     borderRadius: 5,
                                     fontFamily: "Fredoka"
                                   }}
-                                onChange={(event) => {
-                                    const seriesCopy = { ...newMovie };
-                                    seriesCopy.seriesId = event.target.value;
-                                    setNewMovie(seriesCopy);
-                                }}
+                                  onChange={handleSeriesChange}
                             >
                                     <option value= '0'>
                                         Select Series...

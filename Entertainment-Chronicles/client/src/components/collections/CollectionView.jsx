@@ -75,6 +75,9 @@ export const CollectionView = () => {
             <h1>{collection?.name}</h1>
             <hr />
             <div>
+                <Link to={`/collection/edit/${collection?.id}`}>
+                    <Button color="success">Edit Collection</Button>
+                </Link>
                 <Link to={`/collection/delete/${collection?.id}`}>
                     <Button color="danger">Delete Collection</Button>
                 </Link>
@@ -96,6 +99,9 @@ export const CollectionView = () => {
                                 <div className="icon-container">
                                     <Link to="/collections/series/add-items">
                                         <i className="fa-solid fa-plus" />
+                                    </Link>
+                                    <Link to={`/collection/editSeries/${seriesItem.id}`}>
+                                        <i className="fa-regular fa-pen-to-square" />
                                     </Link>
                                     <Link to={`/collection/deleteSeries/${seriesItem.id}`}>
                                         <i className="fa-regular fa-trash-can" />

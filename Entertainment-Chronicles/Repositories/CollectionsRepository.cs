@@ -144,6 +144,18 @@ namespace Entertainment_Chronicles.Repositories
                     DbUtils.AddParameter(cmd, "@SeriesCollectionId", collectionId);
                     cmd.ExecuteNonQuery();
 
+                    // Second, delete any related movies from the series
+                    cmd.CommandText = @"
+                            DELETE FROM Movies 
+                            WHERE SeriesId IN (SELECT Id FROM Series WHERE CollectionId = @SeriesCollectionId)";
+                    cmd.ExecuteNonQuery();
+
+                    // Third, delete any related shows from the series
+                    cmd.CommandText = @"
+                            DELETE FROM Shows 
+                            WHERE SeriesId IN (SELECT Id FROM Series WHERE CollectionId = @SeriesCollectionId)";
+                    cmd.ExecuteNonQuery();
+
                     // Next, delete any related series
                     cmd.CommandText = @"
                             DELETE FROM Series 

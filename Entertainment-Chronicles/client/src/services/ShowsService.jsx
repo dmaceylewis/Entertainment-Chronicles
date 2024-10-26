@@ -53,7 +53,7 @@ export const addShow = (show) => {
 
 // Fetch to handle the Edit Show
 export const editShow = (show) => {
-    return fetch(`${apiUrl}/api/Books/${show.id}`, {
+    return fetch(`${apiUrl}/api/Shows/${show.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

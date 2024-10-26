@@ -139,17 +139,30 @@ namespace Entertainment_Chronicles.Repositories
 
                 using (var cmd = conn.CreateCommand())
                 {
+                    // Optional: Delete related books, movies, and shows before deleting the series
                     cmd.CommandText = @"
-                            DELETE FROM Series
-                            WHERE Id = @id
-                        ";
+                        DELETE FROM Books 
+                        WHERE SeriesId = @id;
+                
+                        DELETE FROM Movies 
+                        WHERE SeriesId = @id;
+                
+                        DELETE FROM Shows 
+                        WHERE SeriesId = @id; ";
 
                     DbUtils.AddParameter(cmd, "@id", seriesId);
+                    cmd.ExecuteNonQuery();
+
+                    // Now delete the series itself
+                    cmd.CommandText = @"
+                        DELETE FROM Series
+                        WHERE Id = @id";
 
                     cmd.ExecuteNonQuery();
                 }
             }
         }
+
 
     }
 }

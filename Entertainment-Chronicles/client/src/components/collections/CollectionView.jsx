@@ -4,7 +4,7 @@ import { getCollectionById } from "../../services/CollectionsService.jsx";
 import { getAllSeries } from "../../services/SeriesService.jsx";
 import { BookList } from "../books/BookList.jsx";
 import { getAllBooks } from "../../services/BooksService.jsx";
-import { Breadcrumb, BreadcrumbItem, Button, Col } from "reactstrap";
+import { Breadcrumb, BreadcrumbItem, Button } from "reactstrap";
 import { getAllShows } from "../../services/ShowsService.jsx";
 import { ShowList } from "../shows/ShowList.jsx";
 import { getAllMovies } from "../../services/MoviesService.jsx";
@@ -93,9 +93,14 @@ export const CollectionView = () => {
                         <div key={seriesItem.id}>
                             <div className="series-name">
                                 <h3>{seriesItem.name}</h3>
-                                <Link to="/collections/series/add-items">
-                                    <i className="fa-solid fa-plus" />
-                                </Link>
+                                <div className="icon-container">
+                                    <Link to="/collections/series/add-items">
+                                        <i className="fa-solid fa-plus" />
+                                    </Link>
+                                    <Link to={`/collection/deleteSeries/${seriesItem.id}`}>
+                                        <i className="fa-regular fa-trash-can" />
+                                    </Link>
+                                </div>
                             </div>
                             <hr />
                             {filteredBooks.length > 0 && <BookList series={seriesItem} books={filteredBooks} />}

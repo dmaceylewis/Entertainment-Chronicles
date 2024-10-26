@@ -9,6 +9,7 @@ import { DeleteCollection } from "../collections/DeleteCollection";
 import { AddToSeries } from "../series/AddToSeries";
 import { EditBook } from "../books/EditBooks";
 import { DeleteBook } from "../books/DeleteBook";
+import { DeleteSeries } from "../series/DeleteSeries";
 
 
 export const ApplicationViews = () => {
@@ -25,6 +26,7 @@ export const ApplicationViews = () => {
           <Route path="/collection/delete/:id" element={<DeleteCollection />} />
           <Route path="/collection/editBook/:id" element={<EditBook />} />
           <Route path="/collection/deleteBook/:id" element={<DeleteBook />} />
+          <Route path="/collection/deleteSeries/:id" element={<DeleteSeries />} />
       </Routes>
    );
    

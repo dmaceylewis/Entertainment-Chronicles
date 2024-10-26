@@ -87,7 +87,7 @@ namespace Entertainment_Chronicles.Repositories
                 using (var cmd = conn.CreateCommand())
                 {
                     cmd.CommandText = @"
-                    INSERT INTO Movies (Title, Order, Watched, SeriesId, PlatformId)
+                    INSERT INTO Movies (Title, [Order], Watched, SeriesId, PlatformId)
                     OUTPUT INSERTED.ID
                     VALUES (@Title, @Order, @Watched, @SeriesId, @PlatformId);";
 

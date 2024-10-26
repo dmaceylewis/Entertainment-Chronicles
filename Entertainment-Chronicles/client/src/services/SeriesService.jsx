@@ -38,3 +38,10 @@ export const addSeries = (series) => {
         body: JSON.stringify(series)
     });
 };
+
+// Fetch to handle Delete
+export const deleteSeries = (id) => {
+  return fetch(`${apiUrl}/api/Series/${id}`, {
+    method: "DELETE",
+  });
+};

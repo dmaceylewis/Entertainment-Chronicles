@@ -12,14 +12,13 @@ import {
   ListGroupItem
 } from 'reactstrap';
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { getAllSeries } from "../../services/SeriesService";
-import { addShow, getAllSeasons } from "../../services/ShowsService";
+import { getAllSeries, getSeriesById } from "../../services/SeriesService";
+import { addMovie } from "../../services/MoviesService";
 import "../auth/login.css";
 
 export const AddMovies = ({ collection }) => {
     const [series, setSeries] = useState([]);
     const [chosenSeriesType, setChosenSeriesType] = useState({});
-    const [season, setSeason] = useState([]);
     const [addedMovie, setAddedMovie] = useState([]);
     const platformId = useParams();
 
@@ -35,8 +34,11 @@ export const AddMovies = ({ collection }) => {
     }
     document.addEventListener("change", handleSeriesTypeChoice)
 
+    const [chosenSeries, setChosenSeries] = useState({})
+
+    const handleChosenSeries = getSeriesById(chosenSeriesType).then((chosenSeries) => setChosenSeries(chosenSeries))
     useEffect(() => {
-        getAllSeasons().then((allSeasons) => setSeason(allSeasons));
+        handleChosenSeries
     }, []);
 
 
@@ -62,7 +64,7 @@ export const AddMovies = ({ collection }) => {
       platformId: parseInt(newMovie.platformId)
     };
     setAddedMovie((currentArray) => [...currentArray, movie])
-    AddMovies(movie).then(setNewMovie({
+    addMovie(movie).then(setNewMovie({
         title: "",
         order: 0,
         watched: false
@@ -199,7 +201,7 @@ export const AddMovies = ({ collection }) => {
         <h5 className="mb-2" style={{fontFamily: "Fredoka", color: 'white'}}>
             Click when you're finished adding movies to this series
         </h5>
-        <Link to={`/collections/${collection.id}`}>
+        <Link to={`/collection/${chosenSeries?.collectionId}`}>
             <Button color="primary" style={{fontFamily: "Fredoka"}}>
                 Save Movies to Series
             </Button>

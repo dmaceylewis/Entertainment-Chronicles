@@ -95,7 +95,7 @@ export const CollectionView = () => {
                     return (
                         <div key={seriesItem.id}>
                             <div className="series-name">
-                                <h3>{seriesItem.name}</h3>
+                                <h3>{seriesItem.order}. {seriesItem.name}</h3>
                                 <div className="icon-container">
                                     <Link to="/collections/series/add-items">
                                         <i className="fa-solid fa-plus" />

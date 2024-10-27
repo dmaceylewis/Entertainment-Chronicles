@@ -120,10 +120,12 @@ namespace Entertainment_Chronicles.Repositories
                 {
                     cmd.CommandText = @"
                             UPDATE Series
-                            SET [Name] = @Name
+                            SET [Name] = @Name,
+                                [Order] = @Order
                             WHERE Id = @Id";
 
                     DbUtils.AddParameter(cmd, "@Name", series.Name);
+                    DbUtils.AddParameter(cmd, "@Order", series.Order);
                     DbUtils.AddParameter(cmd, "@Id", series.Id);
 
                     cmd.ExecuteNonQuery();

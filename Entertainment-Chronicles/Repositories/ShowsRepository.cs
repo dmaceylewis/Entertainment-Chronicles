@@ -95,9 +95,9 @@ namespace Entertainment_Chronicles.Repositories
                 using (var cmd = conn.CreateCommand())
                 {
                     cmd.CommandText = @"
-                    INSERT INTO Books (Title, Order, Watched, SeriesId, SeasonID, PlatformId)
+                    INSERT INTO Shows (Title, [Order], Watched, SeriesId, SeasonID, PlatformId)
                     OUTPUT INSERTED.ID
-                    VALUES (@Title, @Order, @Read, @SeriesId, @SeasonId, @PlatformId);";
+                    VALUES (@Title, @Order, @Watched, @SeriesId, @SeasonId, @PlatformId);";
 
                     DbUtils.AddParameter(cmd, "@Title", show.Title);
                     DbUtils.AddParameter(cmd, "@Order", show.Order);
@@ -106,9 +106,7 @@ namespace Entertainment_Chronicles.Repositories
                     DbUtils.AddParameter(cmd, "@SeasonId", show.SeasonId);
                     DbUtils.AddParameter(cmd, "@PlatformId", show.PlatformId);
 
-                    int id = (int)cmd.ExecuteScalar();
-
-                    show.Id = id;
+                    show.Id = (int)cmd.ExecuteScalar();
                 }
             }
         }

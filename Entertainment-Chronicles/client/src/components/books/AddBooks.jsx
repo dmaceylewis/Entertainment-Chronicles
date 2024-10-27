@@ -15,10 +15,18 @@ import { getAllSeries, getSeriesById } from "../../services/SeriesService";
 import { addBook } from "../../services/BooksService";
 import "../auth/login.css";
 
-export const AddBooks = ({ collection }) => {
+export const AddBooks = () => {
     const [series, setSeries] = useState([]);
     const [chosenSeriesType, setChosenSeriesType] = useState({});
     const [addedBook, setAddedBook] = useState([]);
+    const [newBook, setNewBook] = useState({
+        title: "",
+        author: "",
+        order: 0,
+        read: false,
+        seriesId: 0,
+        platformId: 1
+    });
     
     useEffect(() => {
         getAllSeries().then((allSeries) => setSeries(allSeries));
@@ -34,11 +42,6 @@ export const AddBooks = ({ collection }) => {
 
     const [chosenSeries, setChosenSeries] = useState({})
 
-    // const handleChosenSeries = getSeriesById(chosenSeriesType).then((chosenSeries) => setChosenSeries(chosenSeries))
-    // useEffect(() => {
-    //     handleChosenSeries
-    // }, []);
-
     const handleSeriesChange = (event) => {
       const selectedSeriesId = parseInt(event.target.value);
       setNewBook((prev) => ({ ...prev, seriesId: selectedSeriesId }));
@@ -52,14 +55,6 @@ export const AddBooks = ({ collection }) => {
       }
     };
 
-    const [newBook, setNewBook] = useState({
-        title: "",
-        author: "",
-        order: 0,
-        read: false,
-        seriesId: 0,
-        platformId: 1
-    });
 
     {/* Read Book Checkbox Function */}
     const [hasRead, setHasRead] = useState(false);
@@ -68,6 +63,7 @@ export const AddBooks = ({ collection }) => {
       setHasRead(!hasRead);
     };
   
+    
   const handleAddBook = (e) => {
     e.preventDefault();
     const book = {

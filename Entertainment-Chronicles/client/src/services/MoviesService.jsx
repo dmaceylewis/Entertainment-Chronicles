@@ -38,3 +38,21 @@ export const addMovie = (movie) => {
         body: JSON.stringify(movie)
     });
 };
+
+// Fetch to handle the Edit Movie
+export const editMovie = (movie) => {
+    return fetch(`${apiUrl}/api/Movies/${movie.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(movie),
+    });
+};
+
+// Fetch to handle Delete
+export const deleteMovie = (id) => {
+  return fetch(`${apiUrl}/api/Movies/${id}`, {
+    method: "DELETE",
+  });
+};

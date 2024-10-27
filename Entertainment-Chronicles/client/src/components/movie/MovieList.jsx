@@ -33,12 +33,12 @@ export const MovieList = ({series, movies}) => {
                                             <i className="fa-solid fa-eye" />
                                         </Button>
                                     </Link> */}
-                                    <Link to={`/collection/edit/${movie.id}`}>
+                                    <Link to={`/collection/editMovie/${movie.id}`}>
                                         <Button color="success" outline size="sm">
                                             <i className="fa-regular fa-pen-to-square" />
                                         </Button>
                                     </Link>
-                                    <Link to={`/collection/delete/${movie.id}`}>
+                                    <Link to={`/collection/deleteMovie/${movie.id}`}>
                                         <Button color="danger" outline size="sm">
                                             <i className="fa-regular fa-trash-can" />
                                         </Button>

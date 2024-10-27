@@ -61,3 +61,10 @@ export const editShow = (show) => {
       body: JSON.stringify(show),
     });
 };
+
+// Fetch to handle Delete
+export const deleteShow = (id) => {
+  return fetch(`${apiUrl}/api/Shows/${id}`, {
+    method: "DELETE",
+  });
+};

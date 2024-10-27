@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { 
-  Form, 
+import {  
   FormGroup, 
   Label, 
   Input, 
@@ -16,10 +15,17 @@ import { getAllSeries, getSeriesById } from "../../services/SeriesService";
 import { addMovie, getMoviesById } from "../../services/MoviesService";
 import "../auth/login.css";
 
-export const AddMovies = ({ collection }) => {
+export const AddMovies = () => {
     const [series, setSeries] = useState([]);
     const [chosenSeriesType, setChosenSeriesType] = useState({});
     const [addedMovie, setAddedMovie] = useState([]);
+    const [newMovie, setNewMovie] = useState({
+        title: "",
+        order: 0,
+        watched: false,
+        seriesId: 0,
+        platformId: 2
+    });
 
     useEffect(() => {
         getAllSeries().then((allSeries) => setSeries(allSeries));
@@ -37,30 +43,27 @@ export const AddMovies = ({ collection }) => {
 
     const handleSeriesChange = (event) => {
       const selectedSeriesId = parseInt(event.target.value);
-      setNewBook((prev) => ({ ...prev, seriesId: selectedSeriesId }));
-      
+      setNewMovie((prev) => ({ ...prev, seriesId: selectedSeriesId }));
+  
       if (selectedSeriesId) {
           getMoviesById(selectedSeriesId).then((seriesData) => {
-              setChosenSeries(seriesData);
+              setChosenSeries(seriesData); // Ensure this contains correct data
           });
       } else {
           setChosenSeries({});
       }
-    };
+  };
+  
 
-
-    const [newMovie, setNewMovie] = useState({
-        title: "",
-        order: 0,
-        watched: false
-    });
-
+    
+    {/* Watched Book Checkbox Function */}
     const [hasWatched, setHasWatched] = useState(false);
 
     const handleCheckboxChange = () => {
       setHasWatched(!hasWatched);
     };
   
+
   const handleAddMovie = (e) => {
     e.preventDefault();
     const movie = {
@@ -71,13 +74,18 @@ export const AddMovies = ({ collection }) => {
       platformId: parseInt(newMovie.platformId)
     };
     setAddedMovie((currentArray) => [...currentArray, movie])
-    addMovie(movie).then(setNewMovie({
-        title: "",
-        order: 0,
-        watched: false
+    addMovie(movie).then(() => {
+        // Reset the newMovie state upon successful addition
+        setNewMovie({
+          title: "",
+          order: 0,
+          watched: false,
+          seriesId: 0,
+          platformId: 0
+        });
     }).catch((error) => {
-        console.error("Error adding show:", error);
-      }))
+        console.error("Error adding movie:", error);
+      })
   };
   
 
@@ -116,11 +124,11 @@ export const AddMovies = ({ collection }) => {
                     </Col>
                 </FormGroup>
               <FormGroup className="form-group">
-                <Label for="showTitle" style={{fontFamily: "Fredoka", textAlign: 'left'}}>Title of Movie</Label>
+                <Label for="movieTitle" style={{fontFamily: "Fredoka", textAlign: 'left'}}>Title of Movie</Label>
                 <Input 
                   className="login-form-input"
-                  id="showTitle" type="text"
-                  placeholder="Enter new show title here"
+                  id="movieTitle" type="text"
+                  placeholder="Enter new movie title here"
                   style={{
                     borderRadius: 5,
                     fontFamily: "Fredoka"

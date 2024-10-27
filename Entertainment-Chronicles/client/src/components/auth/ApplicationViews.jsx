@@ -30,9 +30,12 @@ export const ApplicationViews = () => {
           <Route path="/collection/deleteSeries/:id" element={<DeleteSeries />} />
           <Route path="/collection/editSeries/:id" element={<EditSeries />} />
 
-          <Route path="/collection/series/edit/:id" element={<DeleteBook />} />
+          {/* <Route path="/collection/series/edit/:id" element={<DeleteBook />} /> */}
           <Route path="/collection/editBook/:id" element={<EditBook />} />
           <Route path="/collection/deleteBook/:id" element={<DeleteBook />} />
+
+          {/* <Route path="/collection/editMovie/:id" element={<EditMovie />} /> */}
+          {/* <Route path="/collection/deleteMovie/:id" element={<DeleteMovie />} /> */}
       </Routes>
    );
    

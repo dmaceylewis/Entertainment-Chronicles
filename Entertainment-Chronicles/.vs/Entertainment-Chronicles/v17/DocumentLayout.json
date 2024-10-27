@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|c:\\users\\user\\workspace\\capstone\\entertainment-chronicles\\repositories\\moviesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|solutionrelative:repositories\\moviesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|c:\\users\\user\\workspace\\capstone\\entertainment-chronicles\\repositories\\showsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|solutionrelative:repositories\\showsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|c:\\users\\user\\workspace\\capstone\\entertainment-chronicles\\repositories\\seriesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|solutionrelative:repositories\\seriesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|c:\\users\\user\\workspace\\capstone\\entertainment-chronicles\\repositories\\moviesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|solutionrelative:repositories\\moviesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|c:\\users\\user\\workspace\\capstone\\entertainment-chronicles\\repositories\\booksrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|solutionrelative:repositories\\booksrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|c:\\users\\user\\workspace\\capstone\\entertainment-chronicles\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|solutionrelative:controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|c:\\users\\user\\workspace\\capstone\\entertainment-chronicles\\repositories\\seriesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|solutionrelative:repositories\\seriesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6BEB80A5-5A86-483F-91F0-2F309E0DAA4B}|Entertainment-Chronicles.csproj|c:\\users\\user\\workspace\\capstone\\entertainment-chronicles\\repositories\\collectionsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,27 +35,28 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ShowsRepository.cs",
+              "DocumentMoniker": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\Repositories\\ShowsRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\ShowsRepository.cs",
+              "ToolTip": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\Repositories\\ShowsRepository.cs",
+              "RelativeToolTip": "Repositories\\ShowsRepository.cs",
+              "ViewState": "AQIAAFkAAAAAAAAAAAAAAG4AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T14:35:52.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "MoviesRepository.cs",
               "DocumentMoniker": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\Repositories\\MoviesRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\MoviesRepository.cs",
               "ToolTip": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\Repositories\\MoviesRepository.cs",
               "RelativeToolTip": "Repositories\\MoviesRepository.cs",
-              "ViewState": "AQIAAG8AAAAAAAAAAAAowIIAAAAqAAAA",
+              "ViewState": "AQIAAE8AAAAAAAAAAAAAwGMAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-26T19:18:02.87Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BooksController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\Controllers\\BooksController.cs",
-              "RelativeDocumentMoniker": "Controllers\\BooksController.cs",
-              "ToolTip": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\Controllers\\BooksController.cs",
-              "RelativeToolTip": "Controllers\\BooksController.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAgwCYAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T18:06:59.508Z"
             },
             {
               "$type": "Document",
@@ -65,9 +66,10 @@
               "RelativeDocumentMoniker": "Repositories\\BooksRepository.cs",
               "ToolTip": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\Repositories\\BooksRepository.cs",
               "RelativeToolTip": "Repositories\\BooksRepository.cs",
-              "ViewState": "AQIAAGkAAAAAAAAAAAAewHcAAAA4AAAA",
+              "ViewState": "AQIAAE8AAAAAAAAAAAAcwGQAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T21:33:23.378Z"
+              "WhenOpened": "2024-10-15T21:33:23.378Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -77,21 +79,23 @@
               "RelativeDocumentMoniker": "Repositories\\CollectionsRepository.cs",
               "ToolTip": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\Repositories\\CollectionsRepository.cs",
               "RelativeToolTip": "Repositories\\CollectionsRepository.cs",
-              "ViewState": "AQIAAIcAAAAAAAAAAADwv5YAAAAqAAAA",
+              "ViewState": "AQIAAGoAAAAAAAAAAAAswJYAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T17:48:20.596Z"
+              "WhenOpened": "2024-10-15T17:48:20.596Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "SeriesRepository.cs",
               "DocumentMoniker": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\Repositories\\SeriesRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\SeriesRepository.cs",
               "ToolTip": "C:\\Users\\user\\workspace\\Capstone\\Entertainment-Chronicles\\Repositories\\SeriesRepository.cs",
               "RelativeToolTip": "Repositories\\SeriesRepository.cs",
-              "ViewState": "AQIAAGoAAAAAAAAAAAAswI8AAAAqAAAA",
+              "ViewState": "AQIAAHAAAAAAAAAAAAAAwIAAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T20:23:29.496Z"
+              "WhenOpened": "2024-10-14T20:23:29.496Z",
+              "EditorCaption": ""
             }
           ]
         }

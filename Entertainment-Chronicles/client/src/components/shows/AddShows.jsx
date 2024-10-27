@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { 
-  Form, 
   FormGroup, 
   Label, 
   Input, 
@@ -13,19 +12,31 @@ import {
 } from 'reactstrap';
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { getAllSeries } from "../../services/SeriesService";
-import { addShow, getAllSeasons } from "../../services/ShowsService";
+import { addShow, getAllSeasons, getShowById } from "../../services/ShowsService";
 import "../auth/login.css";
 
-export const AddShows = ({ collection }) => {
+export const AddShows = () => {
     const [series, setSeries] = useState([]);
     const [chosenSeriesType, setChosenSeriesType] = useState({});
     const [season, setSeason] = useState([]);
     const [addedShow, setAddedShow] = useState([]);
-    const platformId = useParams();
+    const [newShow, setNewShow] = useState({
+        title: "",
+        order: 0,
+        watched: false,
+        seriesId: 0,
+        seasonId: 0,
+        platformId: 2
+    });
 
     useEffect(() => {
         getAllSeries().then((allSeries) => setSeries(allSeries));
     }, []);
+
+    useEffect(() => {
+        getAllSeasons().then((allSeasons) => setSeason(allSeasons));
+    }, []);
+
 
     {/* Select Series Type Dropdown Function */}
     const handleSeriesTypeChoice = (changeEvent) => {
@@ -35,23 +46,30 @@ export const AddShows = ({ collection }) => {
     }
     document.addEventListener("change", handleSeriesTypeChoice)
 
-    useEffect(() => {
-        getAllSeasons().then((allSeasons) => setSeason(allSeasons));
-    }, []);
+    const [chosenSeries, setChosenSeries] = useState({})
+
+    const handleSeriesChange = (event) => {
+      const selectedSeriesId = parseInt(event.target.value);
+      setNewShow((prev) => ({ ...prev, seriesId: selectedSeriesId }));
+  
+      if (selectedSeriesId) {
+          getShowById(selectedSeriesId).then((seriesData) => {
+              setChosenSeries(seriesData); // Ensure this contains correct data
+          });
+      } else {
+          setChosenSeries({});
+      }
+  };
 
 
-    const [newShow, setNewShow] = useState({
-        title: "",
-        order: 0,
-        watched: false
-    });
-
+    {/* Watched Book Checkbox Function */}
     const [hasWatched, setHasWatched] = useState(false);
 
     const handleCheckboxChange = () => {
       setHasWatched(!hasWatched);
     };
   
+
   const handleAddShow = (e) => {
     e.preventDefault();
     const show = {
@@ -63,13 +81,19 @@ export const AddShows = ({ collection }) => {
       platformId: parseInt(newShow.platformId)
     };
     setAddedShow((currentArray) => [...currentArray, show])
-    addShow(show).then(setNewShow({
-        title: "",
-        order: 0,
-        watched: false
+    addShow(show).then(() => {
+        // Reset the newShow state upon successful addition
+        setNewShow({
+          title: "",
+          order: 0,
+          watched: false,
+          seriesId: 0,
+          seasonId: 0,
+          platformId: 0
+        });
     }).catch((error) => {
         console.error("Error adding show:", error);
-      }))
+      })
   };
   
 
@@ -91,11 +115,7 @@ export const AddShows = ({ collection }) => {
                                     borderRadius: 5,
                                     fontFamily: "Fredoka"
                                   }}
-                                onChange={(event) => {
-                                    const seriesCopy = { ...newShow };
-                                    seriesCopy.seriesId = event.target.value;
-                                    setNewShow(seriesCopy);
-                                }}
+                                  onChange={handleSeriesChange}
                             >
                                     <option value= '0'>
                                         Select Series...
@@ -142,7 +162,7 @@ export const AddShows = ({ collection }) => {
                         onChange={(event) => {
                             const showCopy = { ...newShow };
                             showCopy.seasonId = event.target.value;
-                            setNewShow(seasonCopy);
+                            setNewShow(showCopy); // Use showCopy instead of seasonCopy
                         }}
                     >
                         <option value= '0'>
@@ -231,7 +251,7 @@ export const AddShows = ({ collection }) => {
         <h5 className="mb-2" style={{fontFamily: "Fredoka", color: 'white'}}>
             Click when you're finished adding shows to this series
         </h5>
-        <Link to={`/collection/${collection.id}`}>
+        <Link to={`/collection/${chosenSeries?.collectionId}`}>
             <Button color="primary" style={{fontFamily: "Fredoka"}}>
                 Save Shows to Series
             </Button>

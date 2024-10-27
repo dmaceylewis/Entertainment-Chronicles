@@ -12,6 +12,7 @@ import { DeleteBook } from "../books/DeleteBook";
 import { DeleteSeries } from "../series/DeleteSeries";
 import { EditCollection } from "../collections/EditCollection";
 import { EditSeries } from "../series/EditSeries";
+import { EditMovie } from "../movie/EditMovie";
 
 
 export const ApplicationViews = () => {
@@ -30,12 +31,14 @@ export const ApplicationViews = () => {
           <Route path="/collection/deleteSeries/:id" element={<DeleteSeries />} />
           <Route path="/collection/editSeries/:id" element={<EditSeries />} />
 
-          {/* <Route path="/collection/series/edit/:id" element={<DeleteBook />} /> */}
           <Route path="/collection/editBook/:id" element={<EditBook />} />
           <Route path="/collection/deleteBook/:id" element={<DeleteBook />} />
 
-          {/* <Route path="/collection/editMovie/:id" element={<EditMovie />} /> */}
+          <Route path="/collection/editMovie/:id" element={<EditMovie />} />
           {/* <Route path="/collection/deleteMovie/:id" element={<DeleteMovie />} /> */}
+
+          {/* <Route path="/collection/editShow/:id" element={<EditShow />} /> */}
+          {/* <Route path="/collection/deleteShow/:id" element={<DeleteShow />} /> */}
       </Routes>
    );
    

@@ -63,7 +63,7 @@ export const EditSeries = () => {
         };
 
         editSeries(seriesCopy).then(() => {
-            navigate(`/collection/${collectionId}`);
+            navigate(`/collection/${series.collectionId}`);
         }).catch((error) => {
             console.error("Error editing series:", error);
         });

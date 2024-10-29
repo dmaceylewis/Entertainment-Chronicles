@@ -10,6 +10,8 @@ namespace Entertainment_Chronicles.Models
         [MaxLength(150)]
         public string? Name { get; set; }
 
+        public int Order { get; set; }
+
         public int CollectionId { get; set; }
 
         public Collections? Collections { get; set; }

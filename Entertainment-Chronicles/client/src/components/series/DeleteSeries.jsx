@@ -1,37 +1,32 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { Button, Card, CardBody } from "reactstrap";
 import { useEffect, useState } from "react";
-import { deleteCollection, getAllCollections } from "../../services/CollectionsService.jsx";
-import "./collections.css";
+import { deleteSeries, getAllSeries } from "../../services/SeriesService";
+import "../collections/collections.css";
 
-export const DeleteCollection = () => {
-    const [collection, setCollection] = useState([]);;
+export const DeleteSeries = () => {
+    const [series, setSeries] = useState([]);;
     const { id } = useParams();
     const navigate = useNavigate();
     const userId = JSON.parse(localStorage.getItem("User")).id;
 
     
     useEffect(() => {
-        getAllCollections().then((collections) => {
-            const collectionToDelete = collections.find((collection) => 
-                collection.id === parseInt(id));
-            if (collectionToDelete) {
-                setCollection(collectionToDelete);
+        getAllSeries().then((series) => {
+            const seriesToDelete = series.find((series) => 
+                series.id === parseInt(id));
+            if (seriesToDelete) {
+                setSeries(seriesToDelete);
             }
         });
     }, [id]);
      
     const handleDelete = () => {
-        deleteCollection(id).then(() => {
+        deleteSeries(id).then(() => {
             navigate("/Collections");
         });
     };
     
-    // if (userId !== "1") {
-    //     return null; // Render nothing if the userTypeId is not 1
-    // }
-    
-    // if (!collection) return <p>Loading...</p>;
 
     return (
         <div className="container-collections">
@@ -46,14 +41,14 @@ export const DeleteCollection = () => {
             >
             <CardBody>
                 <div className="collection-delete">
-                    <h1>Delete Collection</h1>
-                    <p>Are you sure you want to delete the Collection: <strong>{collection.name}</strong>?</p>
+                    <h1>Delete Series</h1>
+                    <p>Are you sure you want to delete the Series: <strong>{series.name}</strong>?</p>
                 </div>
                 <div>
                     <Button color="danger" onClick={handleDelete}>
                         Confirm Delete
                     </Button>
-                    <Button color="secondary" onClick={() => navigate("/Collections")}>
+                    <Button color="secondary" onClick={() => navigate(`/collection/${series.id}`)}>
                         Cancel
                     </Button>
                 </div>

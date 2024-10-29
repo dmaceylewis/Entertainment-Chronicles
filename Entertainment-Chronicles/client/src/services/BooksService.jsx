@@ -27,3 +27,32 @@ export const getBookById = (id) => {
         return null;
       });
 };
+
+// Fetch to add new Book to database
+export const addBook = (book) => {
+    return fetch(`${apiUrl}/api/Books`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(book)
+    });
+};
+
+// Fetch to handle the Edit
+export const editBook = (book) => {
+    return fetch(`${apiUrl}/api/Books/${book.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(book),
+    });
+};
+
+// Fetch to handle Delete
+export const deleteBook = (id) => {
+    return fetch(`${apiUrl}/api/Books/${id}`, {
+      method: "DELETE",
+    });
+};

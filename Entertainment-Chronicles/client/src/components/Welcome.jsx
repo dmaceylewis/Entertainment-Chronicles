@@ -14,9 +14,10 @@ export const Welcome = () => {
             <div className="echron-header">
                 <article className="echron-title">
                     <h1>Welcome to the Entertainment Chronicles</h1>
+                    <hr/>
                     <h2>Organize different versions of entertainment into collections!</h2>
+                    <hr/>
                 </article>
-            <hr></hr>
             </div>
 
             <div className="echron-collections">
@@ -27,7 +28,7 @@ export const Welcome = () => {
                         color="warning"
                         className="text-center"
                         style={{
-                            width: '12rem',
+                            
                             fontFamily: "Fredoka",
                             color: 'white'
                         }}
@@ -48,7 +49,7 @@ export const Welcome = () => {
                         color="info"
                         className="text-center"
                         style={{
-                            width: '12rem',
+                            
                             fontFamily: "Fredoka",
                             color: 'white'
                         }}
@@ -69,7 +70,7 @@ export const Welcome = () => {
                         color="danger"
                         className="text-center"
                         style={{
-                            width: '12rem',
+                            
                             fontFamily: "Fredoka",
                             color: 'white'
                         }}

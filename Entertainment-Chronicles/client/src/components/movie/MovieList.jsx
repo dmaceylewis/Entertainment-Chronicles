@@ -1,19 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button, Card, CardBody } from "reactstrap";
-import "./books.css";
+import "./movies.css";
 
-export const BookList = ({series, books}) => {
+export const MovieList = ({series, movies}) => {
 
     return (
         <>
-            {books.length > 0 ? (
-                books.filter(b => b.seriesId === series.id)
-                    .map(book => (
+            {movies.length > 0 ? (
+                movies.filter(m => m.seriesId === series.id)
+                    .map(movie => (
                         <>
                         <Card 
-                            key={book.id}
-                            className="book-card" 
+                            key={movie.id}
+                            className="movie-card" 
                             body color="light" 
                             style={{ 
                                 fontFamily: "Fredoka", 
@@ -23,22 +23,22 @@ export const BookList = ({series, books}) => {
                                 padding: 10,
                             }}
                         >
-                            <CardBody className="book-card-body">
-                                <div className="book-info">
-                                    <p><strong>{book?.order}.</strong> {book?.title} <em>by {book?.author}</em></p>
+                            <CardBody className="movie-card-body">
+                                <div className="movie-info">
+                                    <p><strong>{movie?.order}.</strong> {movie?.title}</p>
                                 </div>
-                                <div className="book-buttons">
+                                <div className="movie-buttons">
                                     {/* <Link to={`/collection/${book.id}`}>
                                         <Button color="info" outline size="sm">
                                             <i className="fa-solid fa-eye" />
                                         </Button>
                                     </Link> */}
-                                    <Link to={`/collection/editBook/${book.id}`}>
+                                    <Link to={`/collection/editMovie/${movie.id}`}>
                                         <Button color="success" outline size="sm">
                                             <i className="fa-regular fa-pen-to-square" />
                                         </Button>
                                     </Link>
-                                    <Link to={`/collection/deleteBook/${book.id}`}>
+                                    <Link to={`/collection/deleteMovie/${movie.id}`}>
                                         <Button color="danger" outline size="sm">
                                             <i className="fa-regular fa-trash-can" />
                                         </Button>
@@ -50,7 +50,7 @@ export const BookList = ({series, books}) => {
                         </>
                     ))
             ) : (
-                <h3>No books found</h3>
+                <h3>No movies found</h3>
             )}
         </>
     )

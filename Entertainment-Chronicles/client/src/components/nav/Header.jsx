@@ -40,9 +40,9 @@ export const Header = ({isLoggedIn, setIsLoggedIn}) => {
                 <NavItem>
                   <NavLink tag={RRNavLink} to="/Collections">Collections</NavLink>
                 </NavItem>
-                <NavItem>
+                {/* <NavItem>
                   <NavLink tag={RRNavLink} to="/Collections/MyCollections">My Collections</NavLink>
-                </NavItem>
+                </NavItem> */}
               </>
             )}
           {isLoggedIn && (

@@ -1,37 +1,30 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { Button, Card, CardBody } from "reactstrap";
 import { useEffect, useState } from "react";
-import { deleteCollection, getAllCollections } from "../../services/CollectionsService.jsx";
-import "./collections.css";
+import { deleteShow, getAllShows } from "../../services/ShowsService.jsx";
+import "../collections/collections.css";
 
-export const DeleteCollection = () => {
-    const [collection, setCollection] = useState([]);;
+export const DeleteShow = () => {
+    const [show, setShow] = useState([]);;
     const { id } = useParams();
     const navigate = useNavigate();
-    const userId = JSON.parse(localStorage.getItem("User")).id;
 
     
     useEffect(() => {
-        getAllCollections().then((collections) => {
-            const collectionToDelete = collections.find((collection) => 
-                collection.id === parseInt(id));
-            if (collectionToDelete) {
-                setCollection(collectionToDelete);
+        getAllShows().then((shows) => {
+            const showToDelete = shows.find((show) => 
+                show.id === parseInt(id));
+            if (showToDelete) {
+                setShow(showToDelete);
             }
         });
     }, [id]);
-     
+    
     const handleDelete = () => {
-        deleteCollection(id).then(() => {
+        deleteShow(id).then(() => {
             navigate("/Collections");
         });
     };
-    
-    // if (userId !== "1") {
-    //     return null; // Render nothing if the userTypeId is not 1
-    // }
-    
-    // if (!collection) return <p>Loading...</p>;
 
     return (
         <div className="container-collections">
@@ -46,8 +39,8 @@ export const DeleteCollection = () => {
             >
             <CardBody>
                 <div className="collection-delete">
-                    <h1>Delete Collection</h1>
-                    <p>Are you sure you want to delete the Collection: <strong>{collection.name}</strong>?</p>
+                    <h1>Delete Show</h1>
+                    <p>Are you sure you want to delete the Show: <strong>{show.title}</strong>?</p>
                 </div>
                 <div>
                     <Button color="danger" onClick={handleDelete}>

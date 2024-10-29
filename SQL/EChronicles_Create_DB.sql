@@ -1,4 +1,4 @@
-﻿USE [master]
+﻿﻿USE [master]
 GO
 IF db_id('EChronicles') IS NULL
   CREATE DATABASE [EChronicles]
@@ -41,6 +41,7 @@ GO
 CREATE TABLE [Series] (
   [Id] int PRIMARY KEY IDENTITY,
   [Name] nvarchar(255) NOT NULL,
+  [Order] int NOT NULL,
   [CollectionId] int NOT NULL,
 
   -- CONSTRAINT [FK_Series_Collections] FOREIGN KEY ([collectionId]) REFERENCES [Collections] ([id])

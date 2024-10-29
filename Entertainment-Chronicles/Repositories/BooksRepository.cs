@@ -98,9 +98,7 @@ namespace Entertainment_Chronicles.Repositories
                     DbUtils.AddParameter(cmd, "@SeriesId", book.SeriesId);
                     DbUtils.AddParameter(cmd, "@PlatformId", book.PlatformId);
 
-                    int id = (int)cmd.ExecuteScalar();
-
-                    book.Id = id;
+                    book.Id = (int)cmd.ExecuteScalar();
                 }
             }
         }
@@ -115,11 +113,10 @@ namespace Entertainment_Chronicles.Repositories
                 {
                     cmd.CommandText = @"
                             UPDATE Books
-                            SET Title = @Title
-                                Author = @Author
-                                Order = @Order
-                                Read = @Read
-                                SeriesId = @SeriesId
+                            SET Title = @Title,
+                                Author = @Author,
+                                [Order] = @Order,
+                                [Read] = @Read,
                                 PlatformId = @PlatformId
                             WHERE Id = @Id";
 
@@ -127,7 +124,6 @@ namespace Entertainment_Chronicles.Repositories
                     DbUtils.AddParameter(cmd, "@Author", book.Author);
                     DbUtils.AddParameter(cmd, "@Order", book.Order);
                     DbUtils.AddParameter(cmd, "@Read", book.Read);
-                    DbUtils.AddParameter(cmd, "@SeriesId", book.SeriesId);
                     DbUtils.AddParameter(cmd, "@PlatformId", book.PlatformId);
                     DbUtils.AddParameter(cmd, "@Id", book.Id);
 

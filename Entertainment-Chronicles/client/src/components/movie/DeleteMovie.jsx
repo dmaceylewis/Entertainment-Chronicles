@@ -1,37 +1,30 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { Button, Card, CardBody } from "reactstrap";
 import { useEffect, useState } from "react";
-import { deleteCollection, getAllCollections } from "../../services/CollectionsService.jsx";
-import "./collections.css";
+import { deleteMovie, getAllMovies } from "../../services/MoviesService.jsx";
+import "../collections/collections.css";
 
-export const DeleteCollection = () => {
-    const [collection, setCollection] = useState([]);;
+export const DeleteMovie = () => {
+    const [movie, setMovie] = useState([]);;
     const { id } = useParams();
     const navigate = useNavigate();
-    const userId = JSON.parse(localStorage.getItem("User")).id;
 
     
     useEffect(() => {
-        getAllCollections().then((collections) => {
-            const collectionToDelete = collections.find((collection) => 
-                collection.id === parseInt(id));
-            if (collectionToDelete) {
-                setCollection(collectionToDelete);
+        getAllMovies().then((movies) => {
+            const movieToDelete = movies.find((movie) => 
+                movie.id === parseInt(id));
+            if (movieToDelete) {
+                setMovie(movieToDelete);
             }
         });
     }, [id]);
-     
+    
     const handleDelete = () => {
-        deleteCollection(id).then(() => {
+        deleteMovie(id).then(() => {
             navigate("/Collections");
         });
     };
-    
-    // if (userId !== "1") {
-    //     return null; // Render nothing if the userTypeId is not 1
-    // }
-    
-    // if (!collection) return <p>Loading...</p>;
 
     return (
         <div className="container-collections">
@@ -46,8 +39,8 @@ export const DeleteCollection = () => {
             >
             <CardBody>
                 <div className="collection-delete">
-                    <h1>Delete Collection</h1>
-                    <p>Are you sure you want to delete the Collection: <strong>{collection.name}</strong>?</p>
+                    <h1>Delete Movie</h1>
+                    <p>Are you sure you want to delete the Movie: <strong>{movie.title}</strong>?</p>
                 </div>
                 <div>
                     <Button color="danger" onClick={handleDelete}>

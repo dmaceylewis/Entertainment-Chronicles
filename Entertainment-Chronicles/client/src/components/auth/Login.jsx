@@ -52,12 +52,12 @@ export const Login = ({setIsLoggedIn}) => {
                 <Input 
                   className="login-form-input"
                   id="email" type="text"
-                  autoComplete="email" 
+                  // autoComplete="email" 
                   placeholder="Enter your email address here"
                   style={{
                     borderRadius: 5,
                     fontFamily: "Fredoka",
-                    color: 'white'
+                    // color: 'white'
                   }}
                   onChange={e => setEmail(e.target.value)} 
                 />

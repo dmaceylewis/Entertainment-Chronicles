@@ -23,8 +23,8 @@ export const CollectionsList = () => {
       <hr />
       <div>
         <Link to="/collections/add" key="collection name">
-        <Col>
-          <Button color="info">Add New Collection</Button>
+          <Col>
+            <Button color="info">Add New Collection</Button>
           </Col>
         </Link>
       </div>

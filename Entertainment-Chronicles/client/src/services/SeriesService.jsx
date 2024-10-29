@@ -28,6 +28,14 @@ export const getSeriesById = (id) => {
       });
 };
 
+export const getSeriesByCollectionId = async (collectionId) => {
+  const response = await fetch(`/api/Series?collectionId=${collectionId}`);
+  if (!response.ok) {
+      throw new Error(`Failed to fetch series: ${response.statusText}`);
+  }
+  return await response.json();
+};
+
 // Fetch to add new Series to database
 export const addSeries = (series) => {
     return fetch(`${apiUrl}/api/Series`, {
@@ -37,4 +45,22 @@ export const addSeries = (series) => {
         },
         body: JSON.stringify(series)
     });
+};
+
+// Fetch to handle the Edit
+export const editSeries = (series) => {
+  return fetch(`${apiUrl}/api/Series/${series.id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(series),
+  });
+};
+
+// Fetch to handle Delete
+export const deleteSeries = (id) => {
+  return fetch(`${apiUrl}/api/Series/${id}`, {
+    method: "DELETE",
+  });
 };

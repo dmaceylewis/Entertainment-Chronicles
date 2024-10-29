@@ -58,9 +58,9 @@ namespace Entertainment_Chronicles.Repositories
                               s.[Name] AS SeriesName,
                               pf.[Name] AS PlatformName
                          FROM Movies m
-                              LEFT JOIN Series s ON b.SeriesId = s.id
-                              LEFT JOIN Platforms pf ON b.PlatformId = pf.id
-                        WHERE up.Id = @Id
+                              LEFT JOIN Series s ON m.SeriesId = s.Id
+                              LEFT JOIN Platforms pf ON m.PlatformId = pf.Id
+                        WHERE m.Id = @Id
                         ORDER BY m.[Order] ASC";
 
                     DbUtils.AddParameter(cmd, "@Id", id);
@@ -87,7 +87,7 @@ namespace Entertainment_Chronicles.Repositories
                 using (var cmd = conn.CreateCommand())
                 {
                     cmd.CommandText = @"
-                    INSERT INTO Movies (Title, Order, Watched, SeriesId, PlatformId)
+                    INSERT INTO Movies (Title, [Order], Watched, SeriesId, PlatformId)
                     OUTPUT INSERTED.ID
                     VALUES (@Title, @Order, @Watched, @SeriesId, @PlatformId);";
 
@@ -97,9 +97,7 @@ namespace Entertainment_Chronicles.Repositories
                     DbUtils.AddParameter(cmd, "@SeriesId", movie.SeriesId);
                     DbUtils.AddParameter(cmd, "@PlatformId", movie.PlatformId);
 
-                    int id = (int)cmd.ExecuteScalar();
-
-                    movie.Id = id;
+                    movie.Id = (int)cmd.ExecuteScalar();
                 }
             }
         }
@@ -114,10 +112,10 @@ namespace Entertainment_Chronicles.Repositories
                 {
                     cmd.CommandText = @"
                             UPDATE Movies
-                            SET Title = @Title
-                                Order = @Order
-                                Watched = @Watched
-                                SeriesId = @SeriesId
+                            SET Title = @Title,
+                                [Order] = @Order,
+                                Watched = @Watched,
+                                SeriesId = @SeriesId,
                                 PlatformId = @PlatformId
                             WHERE Id = @Id";
 

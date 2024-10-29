@@ -1,37 +1,30 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { Button, Card, CardBody } from "reactstrap";
 import { useEffect, useState } from "react";
-import { deleteCollection, getAllCollections } from "../../services/CollectionsService.jsx";
-import "./collections.css";
+import { deleteBook, getAllBooks } from "../../services/BooksService.jsx";
+import "../collections/collections.css";
 
-export const DeleteCollection = () => {
-    const [collection, setCollection] = useState([]);;
+export const DeleteBook = () => {
+    const [book, setBook] = useState([]);;
     const { id } = useParams();
     const navigate = useNavigate();
-    const userId = JSON.parse(localStorage.getItem("User")).id;
 
     
     useEffect(() => {
-        getAllCollections().then((collections) => {
-            const collectionToDelete = collections.find((collection) => 
-                collection.id === parseInt(id));
-            if (collectionToDelete) {
-                setCollection(collectionToDelete);
+        getAllBooks().then((books) => {
+            const bookToDelete = books.find((book) => 
+                book.id === parseInt(id));
+            if (bookToDelete) {
+                setBook(bookToDelete);
             }
         });
     }, [id]);
-     
+    
     const handleDelete = () => {
-        deleteCollection(id).then(() => {
+        deleteBook(id).then(() => {
             navigate("/Collections");
         });
     };
-    
-    // if (userId !== "1") {
-    //     return null; // Render nothing if the userTypeId is not 1
-    // }
-    
-    // if (!collection) return <p>Loading...</p>;
 
     return (
         <div className="container-collections">
@@ -46,8 +39,8 @@ export const DeleteCollection = () => {
             >
             <CardBody>
                 <div className="collection-delete">
-                    <h1>Delete Collection</h1>
-                    <p>Are you sure you want to delete the Collection: <strong>{collection.name}</strong>?</p>
+                    <h1>Delete Book</h1>
+                    <p>Are you sure you want to delete the Book: <strong>{book.title}</strong>?</p>
                 </div>
                 <div>
                     <Button color="danger" onClick={handleDelete}>

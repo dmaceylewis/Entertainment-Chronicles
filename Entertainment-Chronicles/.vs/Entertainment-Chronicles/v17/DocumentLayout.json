@@ -55,8 +55,7 @@
               "RelativeToolTip": "Repositories\\MoviesRepository.cs",
               "ViewState": "AQIAAE8AAAAAAAAAAAAAwGMAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T19:18:02.87Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-26T19:18:02.87Z"
             },
             {
               "$type": "Document",
@@ -68,8 +67,7 @@
               "RelativeToolTip": "Repositories\\BooksRepository.cs",
               "ViewState": "AQIAAE8AAAAAAAAAAAAcwGIAAABOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T21:33:23.378Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-15T21:33:23.378Z"
             },
             {
               "$type": "Document",
@@ -81,8 +79,7 @@
               "RelativeToolTip": "Repositories\\CollectionsRepository.cs",
               "ViewState": "AQIAAGoAAAAAAAAAAAAswJYAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T17:48:20.596Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-15T17:48:20.596Z"
             },
             {
               "$type": "Document",
@@ -94,8 +91,7 @@
               "RelativeToolTip": "Repositories\\SeriesRepository.cs",
               "ViewState": "AQIAAHAAAAAAAAAAAAAAwIAAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T20:23:29.496Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-14T20:23:29.496Z"
             }
           ]
         }
